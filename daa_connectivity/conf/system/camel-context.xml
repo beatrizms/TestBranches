@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+        This config file contains routes that are
+        compatible with Universal Gateway
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cxf="http://camel.apache.org/schema/cxf"
+       xmlns:sec="http://cxf.apache.org/configuration/security"
+       xmlns:httpj="http://cxf.apache.org/transports/http-jetty/configuration"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:camel="http://camel.apache.org/schema/spring"
+       xmlns:amq="http://activemq.apache.org/schema/core"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+       http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+       http://cxf.apache.org/transports/http-jetty/configuration http://cxf.apache.org/schemas/configuration/http-jetty.xsd
+       http://cxf.apache.org/configuration/security http://cxf.apache.org/schemas/configuration/security.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+       http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core-5.3.1.xsd
+       http://activemq.apache.org/camel/schema/spring http://activemq.apache.org/camel/schema/spring/camel-spring.xsd">
+    <import resource="classpath:META-INF/cxf/cxf-extension-http-jetty.xml" />
+    <import resource="file:${client.solution.home}/conf/system/applicationContext.xml"/>
+    <import resource="file:${client.solution.home}/conf/system/applicationContext-standalone.xml"/>
+
+    <!--bean to call pvm process -->
+    <camel:camelContext id="camelContext">
+
+        <camel:endpoint id="tempStoreFolder" uri="file://${temp.storage.path}?delete=true&amp;delay=5000&amp;filter=#serFileFilter"/>
+        <camel:endpoint id="deployWorkFlowEP" uri="file://${client.solution.home}/processflows/input?delay=1000&amp;move=../deployed/${date:now:yyyyMMddHHmmssSSS}-${file:name}&amp;moveFailed=../error/${date:now:yyyyMMddHHmmssSSS}-${file:name}"/>
+        <camel:endpoint id="lookupEP" uri="file://${client.solution.home}/lookup?delay=1000&amp;move=../storage/${file:name}&amp;filter=#regEx" />
+
+        
+        
+
+        
+
+        
+
+                <camel:route id="TopUpListener">
+            <camel:from uri="cxf:bean:ugServiceHTTPEndpoint-TopUpListener"/>
+            <camel:threads poolSize="2" waitForTaskToComplete="IfReplyExpected">
+                <camel:to uri="bean:ugRequestTransformer-TopUpListener"/>
+                <camel:to uri="bean:JBPMProcessorBean"/>
+                <camel:to uri="bean:ugResponseTransformer-TopUpListener"/>
+            </camel:threads>
+        </camel:route>
+        <camel:route id="SMSX02XListener">
+            <camel:from uri="cxf:bean:ugServiceHTTPEndpoint-SMSX02XListener"/>
+            <camel:threads poolSize="2" waitForTaskToComplete="IfReplyExpected">
+                <camel:to uri="bean:ugRequestTransformer-SMSX02XListener"/>
+                <camel:to uri="bean:JBPMProcessorBean"/>
+                <camel:to uri="bean:ugResponseTransformer-SMSX02XListener"/>
+            </camel:threads>
+        </camel:route>
+        <camel:route id="SMSAcceptanceListener">
+            <camel:from uri="cxf:bean:ugServiceHTTPEndpoint-SMSAcceptanceListener"/>
+            <camel:threads poolSize="2" waitForTaskToComplete="IfReplyExpected">
+                <camel:to uri="bean:ugRequestTransformer-SMSAcceptanceListener"/>
+                <camel:to uri="bean:JBPMProcessorBean"/>
+                <camel:to uri="bean:ugResponseTransformer-SMSAcceptanceListener"/>
+            </camel:threads>
+        </camel:route>
+        <camel:route id="NewX02XWebserviceX02XListener">
+            <camel:from uri="cxf:bean:ugServiceHTTPEndpoint-NewX02XWebserviceX02XListener"/>
+            <camel:threads poolSize="2" waitForTaskToComplete="IfReplyExpected">
+                <camel:to uri="bean:ugRequestTransformer-NewX02XWebserviceX02XListener"/>
+                <camel:to uri="bean:JBPMProcessorBean"/>
+                <camel:to uri="bean:ugResponseTransformer-NewX02XWebserviceX02XListener"/>
+            </camel:threads>
+        </camel:route>
+        <camel:route id="BillingListener">
+            <camel:from uri="cxf:bean:ugServiceHTTPEndpoint-BillingListener"/>
+            <camel:threads poolSize="2" waitForTaskToComplete="IfReplyExpected">
+                <camel:to uri="bean:ugRequestTransformer-BillingListener"/>
+                <camel:to uri="bean:JBPMProcessorBean"/>
+                <camel:to uri="bean:ugResponseTransformer-BillingListener"/>
+            </camel:threads>
+        </camel:route>
+
+        
+
+
+                <!--
+                        Deploys IPF flow definitions.
+                        Workflows placed inside the inbox folder will be read and installed. If the installation is successful the file will be moved to the
+                        deployed folder. If there is an error the file will be moved to the error folder.
+                        All moved files will have a time stamp attached to the end of the filename.
+                -->
+        <camel:route id="deployWorkflow">
+            <camel:from ref="deployWorkFlowEP"/>
+            <camel:to uri="bean:fileProcessor"/>
+        </camel:route>
+
+        <!--
+                    Redeploy IPF flow definitions on start-up
+                    make sure that the file is read only
+
+        <camel:route id="redeployWorkflow">
+            <camel:from uri="file:../processflows/deployed?noop=true"/>
+            <camel:to uri="bean:fileProcessor"/>
+        </camel:route>-->
+
+        <camel:route id="tempFolder">
+            <camel:from ref="tempStoreFolder"/>
+            <camel:to uri="bean:storeProcessor"/>
+        </camel:route>
+
+        <!-- File watcher
+        The definition of the route below:
+        lookupDirectory     -> file:../lookup
+        period              -> delay=1000
+        storageDirectory    -> move=../storage/${file:name}
+        regex               -> filter=#regEx
+        -->
+        <camel:route>
+            <camel:from ref="lookupEP"/>
+            <camel:to uri="bean:moveProcessor" />
+        </camel:route>
+
+        <!-- To enable camel scheduler processor node, uncomment this portion
+        <camel:route>
+            <camel:from uri="quartz://myGroup/myTimer/?cron=0/10 * * * * ?"/>
+            <camel:to uri="bean:schedulerProcessor"/>
+        </camel:route>
+        -->
+
+        <!-- Compress files -->
+        <!-- uncomment this section for compression node
+        <camel:route>
+            <camel:from ref="fileToZipWatcherEP"/>
+            <camel:to uri="fileToZipProcessor"/>
+        </camel:route>
+        -->
+
+
+        <!-- Uncompress gz files-->
+        <!-- uncomment this section for compression node
+        <camel:route>
+            <camel:from ref="zipToFileWatcherEP"/>
+            <camel:to uri="zipToFileProcessor"/>
+        </camel:route>
+        -->
+
+
+                <!--
+                        transact to system hook
+                        TCP/IP to receive calls from Transact Hook
+                -->
+        
+
+<!-- Transact connect plus Listener -->
+        
+
+<!-- Service Listener -->
+        
+<!-- End -->
+
+ <!-- For ConnectivityService -->
+        <camel:route id="connectivity_Service_Flow" errorHandlerRef="noErrorHandler">
+            <camel:from uri="direct:connectivity_Service_Flow"/>
+            <camel:to uri="bean:connectivityRequestProcessor"/>
+            <camel:to uri="bean:JBPMProcessorBean"/>
+            <camel:to uri="bean:connectivityResponseProcessor"/>
+        </camel:route>
+<!-- End -->
+
+<!-- Get File -->
+        
+<!-- End -->
+
+        
+
+        <!-- File watcher that reads file and enters a JBPM workflow. -->
+
+<!-- Service Listener Soap-->
+        
+<!-- End -->
+
+<!-- Https Listener-->
+        
+<!-- End -->
+
+<!-- Interface Pack -->
+    
+<!-- End -->
+
+    </camel:camelContext>
+</beans>

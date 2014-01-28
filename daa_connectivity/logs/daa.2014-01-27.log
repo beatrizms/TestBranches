@@ -1,0 +1,23 @@
+2014-01-27 09:40:13,276 [Camel thread 11: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - Loading properties...
+2014-01-27 09:40:13,278 [Camel thread 11: Threads] DEBUG c.e.c.c.ConnectionPool - Calling init method more than once. Skipping.
+2014-01-27 09:40:13,278 [Camel thread 11: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - Properties OK
+2014-01-27 09:40:13,278 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Billing operation flag : 0
+2014-01-27 09:40:13,279 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - getting connection from pool
+2014-01-27 09:40:13,279 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=314, lastUsedAgoInSec=314, creationTimeAgoInSec=314}
+2014-01-27 09:40:13,313 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - topupinfo: query executed: SELECT * FROM TOPUP_NOTIFICATION WHERE TOPUP_NOTIFICATION_ID = 1
+2014-01-27 09:40:13,314 [Camel thread 11: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - get topupinfo MIN: 123455, TOPUP_NOTIFICATION_ID is: 1
+2014-01-27 09:40:13,366 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM DAA_PRODUCT WHERE MOBILEIDENTITYNUMBER_MIN= '123455'
+2014-01-27 09:40:13,366 [Camel thread 11: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - the product doesn't exists
+2014-01-27 09:40:13,366 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM DAA_TRANSACTIONS WHERE PRODUCT_ID = 'null'AND TRANSACTION_DESC = 'AA amount offered'
+2014-01-27 09:40:13,540 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM LOW_0_BALANCE WHERE MOBILEIDENTITYNUMBER_MIN= '123455'
+2014-01-27 09:40:13,565 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM DAA_OFFER WHERE MOBILEIDENTITYNUMBER_MIN= '123455'
+2014-01-27 09:40:13,610 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM PREVIOUS_WEEK_DATA WHERE MOBILEIDENTITYNUMBER_MIN= '123455'
+2014-01-27 09:40:13,634 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Start build alias, signature= DAAReimb, DAA
+2014-01-27 09:40:13,683 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupAmount = 10.0 Field type: Numeric
+2014-01-27 09:40:13,684 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupMin = 123455 Field type: String
+2014-01-27 09:40:13,684 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupTransactionId = id478 Field type: String
+2014-01-27 09:40:13,684 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupType = type Field type: String
+2014-01-27 09:40:13,687 [Camel thread 11: Threads] DEBUG c.ema.daa.topup.ExistsDaa - EXISTS DAA IS: failed
+2014-01-27 09:40:13,688 [Camel thread 11: Threads] DEBUG c.e.d.t.LogTransaction - getting connection from pool
+2014-01-27 09:40:13,688 [Camel thread 11: Threads] DEBUG c.e.d.t.LogTransaction - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=314, lastUsedAgoInSec=314, creationTimeAgoInSec=314}
+2014-01-27 09:40:13,688 [Camel thread 11: Threads] DEBUG c.e.d.t.LogTransaction - UPDATE TOPUP_NOTIFICATION SET PROCESS_STATUS = ? ,  FINISH_DATE = CURRENT_TIMESTAMP WHERE TOPUP_NOTIFICATION_ID = 1

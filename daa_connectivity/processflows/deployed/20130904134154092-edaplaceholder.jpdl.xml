@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<process xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://jbpm.org/4.0/jpdl" xsi:schemaLocation="http://jbpm.org/4.0/jpdl ../conf/jpdl-4.0.xsd" name="edaplaceholder">
+<!--
+NOTE:
+This workflow is a placeholder. It is required for certain environments,
+such as Websphere to allow empty folders to be generated. The user should not modify 
+this workflow. This file can be removed if there another valid jpdl file in this folder.  
+ -->
+    <start name="Start">
+		</start>
+     <state name="End"/>
+    
+</process>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<process name="OfferFlow" key="OfferFlow" xsi:schemaLocation="http://jbpm.org/4.0/jpdl ../conf/jpdl-4.0.xsd" xmlns="http://jbpm.org/4.0/jpdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <start name="Start">
+        <transition to="WS_Listener"/>
+    </start>
+    <custom expr="#{preBeanActivity}" name="WS_Listener">
+        <transition to="LoadSystemProperties" name="success"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityLoadSystemProperties}" name="LoadSystemProperties">
+        <transition to="CheckIfMinMatch" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="CheckIfMinMatch">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="CheckIfSTOP" name="success"/>
+        <transition to="End" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/CheckIfExistingMin.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="CheckIfSTOP">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="End" name="success"/>
+        <transition to="CheckIfActiveOffer" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/CheckIfLastSmsEqualsStop.groovy"/>
+        </property>
+    </custom>
+    <state name="End"/>
+    <custom expr="#{errorBundleHandler}" name="errorBundleHandler">
+        <transition to="End"/>
+        <property name="params">
+            <string value="errorMessage_key=error.message| destinationErrorCode_key=error.destination| errorCode_key=error.code| cpfId=OfferFlow| errorParam_key=error.param"/>
+        </property>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="CheckIfActiveOffer">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="DaPrepare" name="success"/>
+        <transition to="End" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/CheckIfActiveOffer.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityget_Low_Balance_Info}" name="DaPrepare">
+        <transition to="Call_DA_Agent" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    
+        <custom expr="#{daAdaptor_NewX02XDecisionX02XAgentX02XAdaptor}" name="Call_DA_Agent">
+            <transition to="errorBundleHandler" name="error"/>
+            <transition to="errorBundleHandler" name="fail"/>
+            <transition to="Post_Da_Call" name="success"/>
+            <property name="params">
+                <string value="filepath=./strategy| traceLevel=31| errorCode_key=error.code| errorParam_key=error.param| result_key=data| dateFormat=yyyy-MM-dd| loadClasspath=true| data_key=output"/>
+            </property>
+        </custom>
+    
+    <custom expr="#{groovyScriptActivityDaDataToXmlOffer}" name="Post_Da_Call">
+        <transition to="Acceptation_Test" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="Acceptation_Test">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="Create_Offer" name="success"/>
+        <transition to="UpdateDataBase" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/IsOfferEligible.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityOfferCreation}" name="Create_Offer">
+        <transition to="Prepare" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="Prepare">
+        <transition to="PrepareOfferTpl" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="PrepareOfferTpl">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="PrepareSMS" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=OfferSMSTpl.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=SMS| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareSMS}" name="PrepareSMS">
+        <transition to="sendSMS" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivitySendSMS}" name="sendSMS">
+        <transition to="UpdateDataBase" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityUpdateDB}" name="UpdateDataBase">
+        <transition to="End" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+</process>

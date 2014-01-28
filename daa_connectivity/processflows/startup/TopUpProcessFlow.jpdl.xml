@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<process name="TopUpProcessFlow" key="TopUpProcessFlow" xsi:schemaLocation="http://jbpm.org/4.0/jpdl ../conf/jpdl-4.0.xsd" xmlns="http://jbpm.org/4.0/jpdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <start name="Start">
+        <transition to="TopUp_Listener"/>
+    </start>
+    <custom expr="#{preBeanActivity}" name="TopUp_Listener">
+        <transition to="MapInputs" name="success"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityMapInputsReimb}" name="MapInputs">
+        <transition to="Get_Data" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGetTopUpNotificationInfo}" name="Get_Data">
+        <transition to="Exists_DAA" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="Exists_DAA">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="DA_Reimbursement" name="success"/>
+        <transition to="LogTransaction" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/ExistsDaa.groovy"/>
+        </property>
+    </custom>
+    
+        <custom expr="#{daAdaptor_CallX02XDAReimbursement}" name="DA_Reimbursement">
+            <transition to="errorBundleHandler" name="error"/>
+            <transition to="errorBundleHandler" name="fail"/>
+            <transition to="PostDA" name="success"/>
+            <property name="params">
+                <string value="filepath=./strategy| traceLevel=31| errorCode_key=error.code| errorParam_key=error.param| result_key=data| dateFormat=yyyy-MM-dd| loadClasspath=true| data_key=output"/>
+            </property>
+        </custom>
+    
+    <custom expr="#{groovyScriptActivityDaDataToXmlReimb}" name="PostDA">
+        <transition to="Residual_Amount_is_okXf3X" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="Residual_Amount_is_okXf3X">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="MapOutputs" name="success"/>
+        <transition to="LogTransaction" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/IsResidualAmountOK.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityMapOutputsReimb}" name="MapOutputs">
+        <transition to="PrepareBillingParams" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityPrepareBillingCall}" name="PrepareBillingParams">
+        <transition to="PrepareBillingRequest" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="PrepareBillingRequest">
+        <transition to="GetBillingTemplate" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="GetBillingTemplate">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="Call_Billing" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=billingTpl.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=billingRequest| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{httpActivity}" name="Call_Billing">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="Debit_Airtime_is_successfull" name="success"/>
+        <property name="params">
+            <string value="port=8089| host=localhost| dataTimeout=30000| httpMethod=POST| defaultMaxConnPerRoute=60| responseKey=billResult| errorCode_key=error.code| headerKey=header| entityDataKey=billingRequest| returnCodeKey=returnCode| entityCharsetKey=UTF8| parameterKey=params| maxTotalConnection=60| connectionTimeout=20000| path=billing| errorParam_key=error.param"/>
+        </property>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="Debit_Airtime_is_successfull">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="Update_DAA_Balance" name="success"/>
+        <transition to="End" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/IsBillingOperationSuccessfull.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityUpdateDAABalance}" name="Update_DAA_Balance">
+        <transition to="PrepareTopUp" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="PrepareTopUp">
+        <transition to="TopUpTpl" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="TopUpTpl">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="Prepare_SMS_Reimbursement" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=TopupSMSTpl.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=SMS| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareSMS}" name="Prepare_SMS_Reimbursement">
+        <transition to="Send_SMS" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivitySendSMS}" name="Send_SMS">
+        <transition to="End" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <state name="End"/>
+    <custom expr="#{errorBundleHandler}" name="errorBundleHandler">
+        <transition to="End"/>
+        <property name="params">
+            <string value="errorMessage_key=error.message| destinationErrorCode_key=error.destination| errorCode_key=error.code| cpfId=TopUpProcessFlow| errorParam_key=error.param"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityLogTransaction}" name="LogTransaction">
+        <transition to="End" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+</process>

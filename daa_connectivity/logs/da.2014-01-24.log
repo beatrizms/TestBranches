@@ -1,0 +1,172 @@
+2014-01-24 12:33:53,181 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:Class com.experian.eda.component.decisionagent.strategyloader.DefaultStrategyLoader is being used for strategy loading
+2014-01-24 12:33:53,355 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:Entering strategy : DAACrOfr : 24 janv. 2014 12:33:53
+2014-01-24 12:33:53,360 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:IN : Exclusions (Process Flow Object)
+2014-01-24 12:33:53,360 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  IN : Exclusions (Perform Process)
+2014-01-24 12:33:53,360 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    IN : PR_DecSetter DAA Exclusions (Decision Category Node)
+2014-01-24 12:33:53,360 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      IN : DECLINE (Policy Rule Set)
+2014-01-24 12:33:53,361 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      OUT: DECLINE (Policy Rule Set)
+2014-01-24 12:33:53,361 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      IN : DECLINE (Policy Rule Set)
+2014-01-24 12:33:53,361 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Getting Data_Previous Week Extract LDS.Block Status
+2014-01-24 12:33:53,361 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: DAACrPre, External Name: BlockStatus
+2014-01-24 12:33:53,361 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: 
+2014-01-24 12:33:53,375 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Getting Data_Systems Data LDS.Airtime Balance Due
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: DAACrSys, External Name: AirtimeBalanceDue
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: 0
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Getting Data_Systems Data LDS.Airtime Balance Due
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: DAACrSys, External Name: AirtimeBalanceDue
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: 0
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Getting Data_Derived Historical LDS.W0-W3 Cum Total Topup Value
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: DAACrDer, External Name: W0w3CumTotalTopupValue
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: 50000
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Getting Data_Previous Week Extract LDS.Mths since Subscriber
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: DAACrPre, External Name: MthsSinceSubscriber
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: 48
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Getting Data_Derived Historical LDS.W0-W7 Cum Total Topup Value
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: DAACrDer, External Name: W0w7CumTotalTopupValue
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: 100000
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Getting Data_Derived Historical LDS.W0-W3 Cum Nbr Days on Zero Bal
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: DAACrDer, External Name: W0w3CumNbrDaysOnZeroBal
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: 0
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      OUT: DECLINE (Policy Rule Set)
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      IN : ACCEPT (Policy Rule Set)
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      OUT: ACCEPT (Policy Rule Set)
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      Rule default (Policy Rule) : Unsatisfied
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      Rule PR Blocked (Policy Rule) : Satisfied
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      Rule PR Accept (Policy Rule) : Satisfied
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Setting Data_Output LDS.Exclusions-Decision Setter Typical Result 2.Decision Setter ID
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: ExclusionsdecisionSetterTypicalResult2, External Name: ExclusionsdecisionSetterTypicalResult2.DecisionSetterId
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: 7a169de5
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Setting Data_Output LDS.Exclusions-Decision Setter Typical Result 2.Decision Setter Name
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: ExclusionsdecisionSetterTypicalResult2, External Name: ExclusionsdecisionSetterTypicalResult2.DecisionSetterName
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: PR_DecSetter DAA Exclusions
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Setting Data_Output LDS.Exclusions-Decision Setter Typical Result 2.Decision Category
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: ExclusionsdecisionSetterTypicalResult2, External Name: ExclusionsdecisionSetterTypicalResult2.DecisionCategory
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: DECLINE
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Setting Data_Output LDS.Exclusions-Decision Setter Typical Result 2.Decision Text
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: ExclusionsdecisionSetterTypicalResult2, External Name: ExclusionsdecisionSetterTypicalResult2.DecisionText
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: DAA DECLINE
+2014-01-24 12:33:53,376 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Setting Data_Output LDS.Exclusions-Decision Setter Typical Result 2.Sorted Reason Code Table[1]
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: ExclusionsdecisionSetterTypicalResult2, External Name: ExclusionsdecisionSetterTypicalResult2.SortedReasonCodeTable
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: D001
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Setting Data_Output LDS.Exclusions-Decision Setter Typical Result 2.Sorted Reason Code Table[2]
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: ExclusionsdecisionSetterTypicalResult2, External Name: ExclusionsdecisionSetterTypicalResult2.SortedReasonCodeTable
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: A000
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Setting Data_Output LDS.Exclusions-Decision Setter Typical Result 2.Sorted Decision Table[1]
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: ExclusionsdecisionSetterTypicalResult2, External Name: ExclusionsdecisionSetterTypicalResult2.SortedDecisionTable
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: DECLINE             DAA DECLINE         D001      
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Setting Data_Output LDS.Exclusions-Decision Setter Typical Result 2.Sorted Decision Table[2]
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: ExclusionsdecisionSetterTypicalResult2, External Name: ExclusionsdecisionSetterTypicalResult2.SortedDecisionTable
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: ACCEPT              DAA ACCEPT          A000      
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    OUT: PR_DecSetter DAA Exclusions (Decision Category Node)
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  OUT: Exclusions (Perform Process)
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  IN : Derived Data_Define exclusion flag (Derived Data Script)
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Getting Data_Output LDS.Exclusions-Decision Setter Typical Result 2.Decision Category
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Data area: ExclusionsdecisionSetterTypicalResult2, External Name: ExclusionsdecisionSetterTypicalResult2.DecisionCategory
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: DECLINE
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Setting Data_Temp LDS.Exclusion_Flag
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: Y
+2014-01-24 12:33:53,377 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  OUT: Derived Data_Define exclusion flag (Derived Data Script)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  IN : Derived Data_Right Amount (Derived Data Script)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Getting Data_Derived Historical LDS.W0-W3 Cum Total Topup Count
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Data area: DAACrDer, External Name: W0w3CumTotalTopupCount
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: 15
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Getting Data_Derived Historical LDS.W0-W3 Cum Total Topup Count
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Data area: DAACrDer, External Name: W0w3CumTotalTopupCount
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: 15
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Setting Data_Derived Historical LDS.W0-W3 Cum Total Topup Count
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Data area: DAACrDer, External Name: W0w3CumTotalTopupCount
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: 15
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Getting Data_Temp LDS.Exclusion_Flag
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: Y
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Setting Data_Temp.Right Amount
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: 0
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  OUT: Derived Data_Right Amount (Derived Data Script)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  IN : Risk_DAA (Scorecard)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    Initial score: 850
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    IN : 1. CS RISK MthsSubsc (Scorecard Element)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Getting Data_Previous Week Extract LDS.Mths since Subscriber
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: DAACrPre, External Name: MthsSinceSubscriber
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: 48
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      Interval outcome: More than 10, Score: 50
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    OUT: 1. CS RISK MthsSubsc (Scorecard Element)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    IN : 2. CS RISK MaxTopups (Scorecard Element)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Getting Data_Derived Historical LDS.Total Topup Value_Max W0-W5
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: DAACrDer, External Name: TotalTopupValuemaxW0w5
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: 0
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      Interval outcome: 0 - 30,000, Score: -50
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    OUT: 2. CS RISK MaxTopups (Scorecard Element)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    IN : 3. CS RISK Topups L1M (Scorecard Element)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Getting Data_Derived Historical LDS.W0-W3 Cum Total Topup Value
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: DAACrDer, External Name: W0w3CumTotalTopupValue
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: 50000
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      Interval outcome: 45,001 to 55,000, Score: 75
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    OUT: 3. CS RISK Topups L1M (Scorecard Element)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    IN : 4. CS RISK Topups L2M (Scorecard Element)
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Getting Data_Derived Historical LDS.W0-W7 Cum Total Topup Value
+2014-01-24 12:33:53,378 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: DAACrDer, External Name: W0w7CumTotalTopupValue
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: 100000
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      Interval outcome: 60,001 +, Score: 0
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    OUT: 4. CS RISK Topups L2M (Scorecard Element)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    IN : 5. CS RISK NbDays L1M (Scorecard Element)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Getting Data_Derived Historical LDS.W0-W3 Cum Nbr Days on Zero Bal
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Data area: DAACrDer, External Name: W0w3CumNbrDaysOnZeroBal
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Value: 0
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      Interval outcome: 0, Score: 100
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    OUT: 5. CS RISK NbDays L1M (Scorecard Element)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    Score Result: 1025
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Setting Data_Output LDS.Risk Scorecard-Scorecard Minimum Results.Scorecard Name
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Data area: RiskScorecardscorecardMinimumResults, External Name: RiskScorecardscorecardMinimumResults.ScorecardName
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: Risk_DAA
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Setting Data_Output LDS.Risk Scorecard-Scorecard Minimum Results.Scorecard ID
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Data area: RiskScorecardscorecardMinimumResults, External Name: RiskScorecardscorecardMinimumResults.ScorecardId
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: 0
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Setting Data_Output LDS.Risk Scorecard-Scorecard Minimum Results.Score
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Data area: RiskScorecardscorecardMinimumResults, External Name: RiskScorecardscorecardMinimumResults.Score
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: 1025
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  OUT: Risk_DAA (Scorecard)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  IN : DAA Copy Risk Score to Temp (Derived Data Script)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Getting Data_Output LDS.Risk Scorecard-Scorecard Minimum Results.Score
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Data area: RiskScorecardscorecardMinimumResults, External Name: RiskScorecardscorecardMinimumResults.Score
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: 1025
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Setting Data_Temp.Credit score
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: 1025
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  OUT: DAA Copy Risk Score to Temp (Derived Data Script)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  IN : Daily Counter (Boolean Expression)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    * Getting Data_Systems Data LDS.DailyCheck MaxNbrOffer
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Data area: DAACrSys, External Name: DailycheckMaxnbroffer
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      * Value: 1
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    Outcome: True
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  OUT: Daily Counter (Boolean Expression)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  IN : Calc Credit Offer (Perform Process)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    IN : Process (Treatment Table Tree)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      IN : Process (Segmentation Tree)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        IN : CS Exclusion Flag Class Set (Class Set)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Getting Data_Output LDS.Exclusions-Decision Setter Typical Result 2.Decision Category
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:            * Data area: ExclusionsdecisionSetterTypicalResult2, External Name: ExclusionsdecisionSetterTypicalResult2.DecisionCategory
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:            * Value: DECLINE
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          Outcome: Excluded
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        OUT: CS Exclusion Flag Class Set (Class Set)
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Setting Data_Output LDS.Process-Treatment Tree Results 2.Outcome ID
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: ProcesstreatmentTreeResults2, External Name: ProcesstreatmentTreeResults2.OutcomeId
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: 7
+2014-01-24 12:33:53,379 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Setting Data_Output LDS.Process-Treatment Tree Results 2.Outcome Name
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: ProcesstreatmentTreeResults2, External Name: ProcesstreatmentTreeResults2.OutcomeName
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: DO NOTHING
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Setting Data_Output LDS.Process-Treatment Tree Results 2.Treatment Tree Name
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: ProcesstreatmentTreeResults2, External Name: ProcesstreatmentTreeResults2.TreatmentTreeName
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: DAA Credit Offer Treatment Tree NEW
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Setting Data_Output LDS.Process-Treatment Tree Results 2.Treatment Tree ID
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: ProcesstreatmentTreeResults2, External Name: ProcesstreatmentTreeResults2.TreatmentTreeId
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: b6cc329c
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Setting Data_Output LDS.Process-Treatment Tree Results 2.Leaf Node Name
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: ProcesstreatmentTreeResults2, External Name: ProcesstreatmentTreeResults2.LeafNodeName
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: <<Leaf Node Name>>
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        * Setting Data_Output LDS.Process-Treatment Tree Results 2.Leaf Node ID
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Data area: ProcesstreatmentTreeResults2, External Name: ProcesstreatmentTreeResults2.LeafNodeId
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:          * Value: 1
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:        Outcome: DO NOTHING
+2014-01-24 12:33:53,380 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:      OUT: Process (Segmentation Tree)
+2014-01-24 12:33:53,382 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:    OUT: Process (Treatment Table Tree)
+2014-01-24 12:33:53,382 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:  OUT: Calc Credit Offer (Perform Process)
+2014-01-24 12:33:53,382 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:OUT: Exclusions (Process Flow Object)
+2014-01-24 12:33:53,382 [Camel thread 10: Threads] INFO c.e.eda.runtime.common.da - Camel thread 10: Threads:Exiting strategy : DAACrOfr

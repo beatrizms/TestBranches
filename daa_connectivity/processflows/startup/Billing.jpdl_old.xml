@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<process name="Billing" key="Billing" xsi:schemaLocation="http://jbpm.org/4.0/jpdl ../conf/jpdl-4.0.xsd" xmlns="http://jbpm.org/4.0/jpdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <start name="Start">
+        <transition to="Billing_Listener"/>
+    </start>
+    <custom expr="#{preBeanActivity}" name="Billing_Listener">
+        <transition to="LoadSystemProperties" name="success"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityLoadSystemProperties}" name="LoadSystemProperties">
+        <transition to="GetSessionInfo" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGetSessionInfo}" name="GetSessionInfo">
+        <transition to="ExistsSession" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="ExistsSession">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="CreateBalanceHeaders" name="success"/>
+        <transition to="AddCreateSessionHeaders" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/ExistsSession.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityAddBalanceHeaders}" name="CreateBalanceHeaders">
+        <transition to="PrepareBalanceTemplate" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="PrepareBalanceTemplate">
+        <transition to="BalanceTemplate" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="BalanceTemplate">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="CallBalance" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=Balance.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=balanceRequest| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{httpActivity}" name="CallBalance">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="IsSessionOK" name="success"/>
+        <property name="params">
+            <string value="port=9988| host=localhost| dataTimeout=5000| httpMethod=POST| defaultMaxConnPerRoute=60| responseKey=dataBalance| errorCode_key=error.code| headerKey=myHeader| entityDataKey=balanceRequest| returnCodeKey=returnCodeKey| entityCharsetKey=UTF8| parameterKey=parameterKey| maxTotalConnection=60| connectionTimeout=2000| path=OUGWar/workflow?workflow=readBillingFile&amp;fileName=balance| errorParam_key=error.param"/>
+        </property>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="IsSessionOK">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="AddLoginHeader" name="success"/>
+        <transition to="AddCreateSessionHeaders" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/IsSessionValid.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityAddLoginHeaders}" name="AddLoginHeader">
+        <transition to="prepareLoginParamsTemplate" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="prepareLoginParamsTemplate">
+        <transition to="PrepareLoginTemplate" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="PrepareLoginTemplate">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="SessionLogin" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=LoginTemplate.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=loginRequest| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{httpActivity}" name="SessionLogin">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="HandleLogin" name="success"/>
+        <property name="params">
+            <string value="port=9988| host=localhost| dataTimeout=5000| httpMethod=POST| defaultMaxConnPerRoute=60| responseKey=dataLogin| errorCode_key=error.code| headerKey=myHeader| entityDataKey=loginRequest| returnCodeKey=returnCodeKey| entityCharsetKey=UTF8| parameterKey=parameterKey| maxTotalConnection=60| connectionTimeout=2000| path=OUGWar/workflow?workflow=readBillingFile&amp;fileName=login| errorParam_key=error.param"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityLogin}" name="HandleLogin">
+        <transition to="IsLoginSuccessfull" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="IsLoginSuccessfull">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="AddBuy2Headers" name="success"/>
+        <transition to="ReportOperation" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/IsLoginSuccessfull.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityAddBuy2Headers}" name="AddBuy2Headers">
+        <transition to="PrepareBuy2ParamsTemplate" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="PrepareBuy2ParamsTemplate">
+        <transition to="PrepareBuy2Template" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="PrepareBuy2Template">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="CallBuy2" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=Buy2Template.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=buyRequest| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{httpActivity}" name="CallBuy2">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="HandleBuy2" name="success"/>
+        <property name="params">
+            <string value="port=9988| host=localhost| dataTimeout=5000| httpMethod=POST| defaultMaxConnPerRoute=60| responseKey=dataBuy| errorCode_key=error.code| headerKey=myHeader| entityDataKey=buyRequest| returnCodeKey=returnCodeKey| entityCharsetKey=UTF8| parameterKey=parameterKey| maxTotalConnection=60| connectionTimeout=2000| path=OUGWar/workflow?workflow=readBillingFile&amp;fileName=buy| errorParam_key=error.param"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityBuy2Call}" name="HandleBuy2">
+        <transition to="isBuy2Succesfull" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="isBuy2Succesfull">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="ReportOperation" name="success"/>
+        <transition to="ReportOperation" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/IsBuy2CallSuccessfull.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="ReportOperation">
+        <transition to="BillingReponseTemplate" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="BillingReponseTemplate">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="End" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=BillingResponseTemplate.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=billingResult1| xmlFile="/>
+        </property>
+    </custom>
+    <state name="End"/>
+    <custom expr="#{errorBundleHandler}" name="errorBundleHandler">
+        <transition to="End"/>
+        <property name="params">
+            <string value="errorMessage_key=error.message| destinationErrorCode_key=error.destination| errorCode_key=error.code| cpfId=Billing| errorParam_key=error.param"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityAddCreateSessionHeaders}" name="AddCreateSessionHeaders">
+        <transition to="PrepareSessionParams" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="PrepareSessionParams">
+        <transition to="PrepareTemplateSession" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="PrepareTemplateSession">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="CreateSession" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=createSession.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=sessionRequest| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{httpActivity}" name="CreateSession">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="ManageSessionParams" name="success"/>
+        <property name="params">
+            <string value="port=9988| host=localhost| dataTimeout=5000| httpMethod=POST| defaultMaxConnPerRoute=60| responseKey=data| errorCode_key=error.code| headerKey=myHeader| entityDataKey=sessionRequest| returnCodeKey=returnCodeKey| entityCharsetKey=UTF8| parameterKey=parameterKey| maxTotalConnection=60| connectionTimeout=2000| path=OUGWar/workflow?workflow=readBillingFile&amp;fileName=createSessionResponse| errorParam_key=error.param"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityManageSessionResult}" name="ManageSessionParams">
+        <transition to="isSessionCreated" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="isSessionCreated">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="UpdateSystemSession" name="success"/>
+        <transition to="ReportOperation" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/IsSessionCreated.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityCreateSession}" name="UpdateSystemSession">
+        <transition to="AddLoginHeader" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+</process>

@@ -1,0 +1,1 @@
+Quy khach da tu choi su dung dich vu Ung tien tu MobiFone. Khi muon su dung dich vụ Ung tien, soan DK gui 9015. Tran trong cam on. 

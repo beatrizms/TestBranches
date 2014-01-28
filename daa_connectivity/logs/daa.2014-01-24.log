@@ -1,0 +1,455 @@
+2014-01-24 12:33:52,128 [Camel thread 10: Threads] DEBUG c.e.d.c.LoadSystemProperties - Loading properties ...
+2014-01-24 12:33:52,139 [Camel thread 10: Threads] DEBUG c.e.d.c.LoadSystemProperties - Properties Loaded.
+2014-01-24 12:33:52,141 [Camel thread 10: Threads] TRACE c.e.d.c.LoadSystemProperties - Properties : [sourcePhoneNumber:0033682618213, file.encoding.pkg:sun.io, client.solution.home:E:\Prod\DynamicAdvancedAirtime\daa_connectivity, billing.account:anAccount, java.home:C:/Program Files/Java/jdk1.7.0, atb.web.service.url:http://10.158.12.158:8085, smsPassword:XbwbuT, jdbc.connection.pool.DAA_CONNECTION_POOL.password:telco, jdbc.connection.pool.DAA_CONNECTION_POOL.partitionCount:1, ibm.trustStore.password:password, oracle.initialSize:1, template.pds.service.socket.timeout:30000, jetty.ssl.keypassword:password, java.endorsed.dirs:C:\Program Files (x86)\Java\jre7\lib\endorsed, db2.username:db2admin, mssql.url:jdbc:sqlserver://10.158.12.214:1433;databaseName=interfacebroker_dev;integratedSecurity=true, smsResponse.OK:OK, sun.os.patch.level:Service Pack 1, java.vendor.url:http://java.oracle.com/, java.version:1.7.0_21, mysql.maxActive:2, wrapper.version:3.3.1, openam.service.password:UrlAccessAgent123, java.vendor.url.bug:http://bugreport.sun.com/bugreport/, template.pds.service.protocol:http, template.pds.service.server.name:localhost, hostName:EAP0405, user.name:SYSTEM, sun.io.unicode.encoding:UnicodeLittle, sun.jnu.encoding:Cp1252, java.runtime.name:Java(TM) SE Runtime Environment, smsLogin:emaibsms, wrapper.key:9tbmz9bMY3XI-KWM, java.specification.name:Java Platform API Specification, user.timezone:Europe/Paris, port:1414, mssql.driverClassName:com.microsoft.sqlserver.jdbc.SQLServerDriver, openam.authentication.url:http://localhost:8080/sso/identityservices/IdentityServices, user.script:, path.separator:;, wrapper.port:32000, offer.finishDate:24, file.encoding:UTF-8, mysql.password:dev_interfacebroker, javax.net.ssl.keyStore:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/key/ibmmq/keystore.jks, sun.java.command:org.tanukisoftware.wrapper.WrapperSimpleApp com.experian.eda.enterprise.startup.Bootstrap -fa E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system/camel-context.xml, ibm.keyStore.password:password, jetty.keyStore.file:${client.solution.home}/key/jetty/serverKeys, openam.naming.service.url:http://localhost:8080/sso/namingservice, strategy.input.signature:DAA, temp.storage.path:/storage, oracle.url:jdbc:oracle:thin:@10.158.12.214:1521:XE, csv.path.reimb:E:\TMP\DynamicAdvancedAirtime\daa_connectivity\strategy\DAAReimb.csv, java.io.tmpdir:C:\Windows\system32\config\systemprofile\AppData\Local\Temp\, smsPort:8888, user.language:fr, groovy.source.encoding:UTF-8, javax.net.ssl.trustStorePassword:password, line.separator:
+, template.pds.service.path.to.service:/remoting/template-pds, login.service.protocol:http, template.pds.service.port:8888, login.service.socket.timeout:30000, app.dir:${client.solution.home}, ibm.keyStore.file:${client.solution.home}/key/ibmmq/keystore.jks, mysql.driverClassName:com.mysql.jdbc.Driver, java.vm.info:mixed mode, sharing, sun.desktop:windows, oracle.username:interfacebroker_dev, java.vm.specification.name:Java Virtual Machine Specification, wrapper.jvm.port.max:31999, wrapper.pid:18616, mysql.initialSize:1, oracle.driverClassName:oracle.jdbc.driver.OracleDriver, strategy.input.alias.reimb:DAAReimb, javax.net.ssl.keyStorePassword:password, activemq.keyStore.file:${client.solution.home}/key/activemq/client.ks, jdbc.connection.pool.DAA_CONNECTION_POOL.username:client_1, java.awt.printerjob:sun.awt.windows.WPrinterJob, jdbc.connection.pool.DAA_CONNECTION_POOL.jdbcUrl:jdbc:oracle:thin:@localhost:1521:XE, jetty.keyStore.password:password, db2.maxActive:2, javax.net.ssl.trustStore:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/key/ibmmq/truststore.jks, billing.password:aPassword, rds.ib.storage.connection.timeout:5000, rds.ib.storage.max.total.connections:8, login.service.path.to.service:/remoting/LoginService, mssql.password:Experian789, template.pds.service.connection.timeout:5000, smsHost:smpp3.infobip.com, csv.path.offer:E:\TMP\DynamicAdvancedAirtime\daa_connectivity\strategy\DAACrOfr.csv, db2.driverClassName:com.ibm.db2.jcc.DB2Driver, os.name:Windows 7, java.specification.vendor:Oracle Corporation, transportType:1, java.vm.name:Java HotSpot(TM) Client VM, jetty.ssl.password:ENC{Mvb9qOhyg4sim4mgi0NJQw==}, template.pds.service.max.total.connections:8, ibm.trustStore.file:${client.solution.home}/key/ibmmq/truststore.jks, java.library.path:E:\TMP\DynamicAdvancedAirtime\UG_1_4_HFE/lib, wrapper.java.pid:14640, rds.ib.storage.path.to.service:/remoting/rds-service, java.class.version:51.0, login.service.port:8888, rds.ib.storage.protocol:http, channel:mktest.channel, mssql.maxActive:2, java.util.logging.config.file:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system/debug.properties, strategy.input.alias.offer:DAACrOfr, oracle.maxActive:2, wrapper.native_library:wrapper, sslCipherSuite:SSL_RSA_WITH_NULL_MD5, logback.configurationFile:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system/logback.xml, sun.boot.library.path:C:\Program Files (x86)\Java\jre7\bin, mysql.username:interfacebroker_dev, jdbc.connection.pool.DAA_CONNECTION_POOL.minConnectionsPerPartition:5, login.service.server.name:localhost, sun.management.compiler:HotSpot Client Compiler, java.awt.graphicsenv:sun.awt.Win32GraphicsEnvironment, user.variant:, smsResponse.ACTIVATE:ACTIVATE, wrapper.cpu.timeout:10, rds.ib.storage.port:8888, wrapper.jvmid:1, connectivity.service.url:http://localhost:8081/connectivity-service, smsResponse.STOP:STOP, db2.password:qaQA12!@, java.vm.specification.version:1.7, awt.toolkit:sun.awt.windows.WToolkit, sun.cpu.isalist:pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86, rds.ib.storage.socket.timeout:30000, login.service.connection.timeout:5000, java.ext.dirs:C:\Program Files (x86)\Java\jre7\lib\ext;C:\Windows\Sun\Java\lib\ext, os.version:6.1, user.home:C:\, java.vm.vendor:Oracle Corporation, queueManager:mktest.qm, wrapper.jvm.port.min:31000, user.dir:E:\Prod\DynamicAdvancedAirtime\daa_connectivity, transacthookservice.url:http://localhost:8092/TransactHookService, strategy.output.layout.reimb:DAAROUT, mssql.initialSize:1, mssql.username:experianapwilliamc, atb.authentication.password:atb_password, sun.cpu.endian:little, db2.url:jdbc:db2://10.158.12.141:50000/SAMPLE, openam.service.userid:UrlAccessAgent, ipfservice.url:http://localhost:8092/IPFService, strategy.output.dataKey:data, interfacepack.service.url:http://localhost:8081/ib-service, activemq.keyStore.password:password, wrapper.service:TRUE, derby.stream.error.file:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/logs/derby.log, java.vm.version:23.21-b01, java.class.path:E:\TMP\DynamicAdvancedAirtime\UG_1_4_HFE/lib/wrapper.jar;.;C:\Program Files\PowerCurve\Connectivity\Connectivity v1.2SP3/lib/core/enterprise-bootstrap.jar;E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system, os.arch:x86, openam.authentication.url.wsdl:${openam.authentication.url}?WSDL, sun.java.launcher:SUN_STANDARD, mysql.url:jdbc:mysql://10.158.12.211:3306/interfacebroker_dev, ib.home:C:\Program Files\PowerCurve\Connectivity\Connectivity v1.2SP3, login.service.max.total.connections:8, java.vm.specification.vendor:Oracle Corporation, file.separator:\, jetty.ssl.keystore:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/key/jetty/serverKeys, java.runtime.version:1.7.0_21-b11, jdbc.connection.pool.DAA_CONNECTION_POOL.maxConnectionsPerPartition:5, sun.boot.class.path:C:\Program Files (x86)\Java\jre7\lib\resources.jar;C:\Program Files (x86)\Java\jre7\lib\rt.jar;C:\Program Files (x86)\Java\jre7\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre7\lib\jsse.jar;C:\Program Files (x86)\Java\jre7\lib\jce.jar;C:\Program Files (x86)\Java\jre7\lib\charsets.jar;C:\Program Files (x86)\Java\jre7\lib\jfr.jar;C:\Program Files (x86)\Java\jre7\classes, rds.ib.storage.server.name:localhost, user.country:FR, activemq.trustStore.file:${client.solution.home}/key/activemq/client.ts, atb.authentication.subcode:atb_user, ibservice.url:http://localhost:8092/IBService, java.vendor:Oracle Corporation, db2.initialSize:1, strategy.output.layout.offer:DAACrOUT, java.specification.version:1.7, oracle.password:dev_interfacebroker, sun.arch.data.model:32]
+2014-01-24 12:33:52,145 [Camel thread 10: Threads] INFO c.e.c.c.ConnectionPool - Init called. Processing ...
+2014-01-24 12:33:52,146 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Got property for connection : <DAA_CONNECTION_POOL> Key :<password> Value : <telco>
+2014-01-24 12:33:52,194 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Property set successfully
+2014-01-24 12:33:52,194 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Got property for connection : <DAA_CONNECTION_POOL> Key :<partitionCount> Value : <1>
+2014-01-24 12:33:52,197 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Property set successfully
+2014-01-24 12:33:52,197 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Got property for connection : <DAA_CONNECTION_POOL> Key :<username> Value : <client_1>
+2014-01-24 12:33:52,199 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Property set successfully
+2014-01-24 12:33:52,199 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Got property for connection : <DAA_CONNECTION_POOL> Key :<jdbcUrl> Value : <jdbc:oracle:thin:@localhost:1521:XE>
+2014-01-24 12:33:52,202 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Property set successfully
+2014-01-24 12:33:52,202 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Got property for connection : <DAA_CONNECTION_POOL> Key :<minConnectionsPerPartition> Value : <5>
+2014-01-24 12:33:52,204 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Property set successfully
+2014-01-24 12:33:52,204 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Got property for connection : <DAA_CONNECTION_POOL> Key :<maxConnectionsPerPartition> Value : <5>
+2014-01-24 12:33:52,218 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Property set successfully
+2014-01-24 12:33:52,719 [Camel thread 10: Threads] INFO c.e.c.c.ConnectionPool - Init done. Number of created pools : 1
+2014-01-24 12:33:52,719 [Camel thread 10: Threads] INFO c.e.c.c.ConnectionPool - Database Pooling init finished in 574 ms
+2014-01-24 12:33:52,719 [Camel thread 10: Threads] DEBUG c.e.d.o.CheckIfExistingMin - getting connection from pool
+2014-01-24 12:33:52,721 [Camel thread 10: Threads] DEBUG c.e.d.o.CheckIfExistingMin - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=0, lastUsedAgoInSec=0, creationTimeAgoInSec=0}
+2014-01-24 12:33:52,727 [Camel thread 10: Threads] DEBUG c.e.d.o.CheckIfExistingMin - select * from LOW_0_BALANCE where LOW_0_BALANCE_ID = '1'
+2014-01-24 12:33:52,776 [Camel thread 10: Threads] TRACE c.e.d.o.CheckIfExistingMin - getNotificationInfo: Statement created
+2014-01-24 12:33:52,819 [Camel thread 10: Threads] TRACE c.e.d.o.CheckIfExistingMin - getNotificationInfo: in the while 
+2014-01-24 12:33:52,819 [Camel thread 10: Threads] TRACE c.e.d.o.CheckIfExistingMin - getNotificationInfo MIN: 12345
+2014-01-24 12:33:52,820 [Camel thread 10: Threads] DEBUG c.e.d.o.CheckIfExistingMin - connecction is ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=0, lastUsedAgoInSec=0, creationTimeAgoInSec=0}
+2014-01-24 12:33:52,820 [Camel thread 10: Threads] DEBUG c.e.d.o.CheckIfExistingMin - query Check if Existing min: SELECT * FROM PREVIOUS_WEEK_DATA where PREVIOUS_WEEK_DATA.MOBILEIDENTITYNUMBER_MIN = '12345'
+2014-01-24 12:33:52,820 [Camel thread 10: Threads] DEBUG c.e.d.o.CheckIfExistingMin - connecction is ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=0, lastUsedAgoInSec=0, creationTimeAgoInSec=0}
+2014-01-24 12:33:52,823 [Camel thread 10: Threads] DEBUG c.e.d.o.CheckIfExistingMin - connecction is ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=0, lastUsedAgoInSec=0, creationTimeAgoInSec=0}
+2014-01-24 12:33:52,823 [Camel thread 10: Threads] TRACE c.e.d.o.CheckIfExistingMin - IT exists a record on previous week data
+2014-01-24 12:33:52,827 [Camel thread 10: Threads] TRACE c.e.d.o.CheckIfExistingMin - Existing min 12345
+2014-01-24 12:33:52,827 [Camel thread 10: Threads] TRACE c.e.d.o.CheckIfExistingMin - Low Balance id is:1
+2014-01-24 12:33:52,918 [Camel thread 10: Threads] DEBUG c.e.d.o.CheckIfExistingMin - update LOW_0_BALANCE set PROCESS_STATUS = 'NO MATCH', FINISH_DATE = CURRENT_TIMESTAMP where LOW_0_BALANCE_ID = ? AND MOBILEIDENTITYNUMBER_MIN= '12345'
+2014-01-24 12:33:52,951 [Camel thread 10: Threads] TRACE c.e.d.o.CheckIfExistingMin - lines updated: 1
+2014-01-24 12:33:52,952 [Camel thread 10: Threads] DEBUG c.e.d.a.CheckIfLastSmsEqualsStop - getting connection from pool
+2014-01-24 12:33:52,952 [Camel thread 10: Threads] DEBUG c.e.d.a.CheckIfLastSmsEqualsStop - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=0, lastUsedAgoInSec=0, creationTimeAgoInSec=0}
+2014-01-24 12:33:52,952 [Camel thread 10: Threads] DEBUG c.e.d.a.CheckIfLastSmsEqualsStop - select * from DAA_CUSTOMER_DETAILS where CUSTOMER_MIN =  12345
+2014-01-24 12:33:52,953 [Camel thread 10: Threads] TRACE c.e.d.a.CheckIfLastSmsEqualsStop - CheckIfLastSmsEqualsStop: getCustomerInfo flag is:  0
+2014-01-24 12:33:52,958 [Camel thread 10: Threads] DEBUG c.e.d.a.CheckIfLastSmsEqualsStop - update low_0_balance set process_status='STOP', finish_date= current_timestamp where LOW_0_BALANCE_ID = null
+2014-01-24 12:33:52,959 [Camel thread 10: Threads] DEBUG c.e.d.a.CheckIfActiveOffer - getting connection from pool
+2014-01-24 12:33:52,960 [Camel thread 10: Threads] DEBUG c.e.d.a.CheckIfActiveOffer - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=0, lastUsedAgoInSec=0, creationTimeAgoInSec=0}
+2014-01-24 12:33:52,960 [Camel thread 10: Threads] DEBUG c.e.d.a.CheckIfActiveOffer - query: SELECT CURRENT_TIMESTAMP, max(VALIDITY_DATE), DAA_PRODUCT.PRODSTATUS FROM DAA_OFFER, DAA_PRODUCT where DAA_OFFER.MOBILEIDENTITYNUMBER_MIN = '12345' AND DAA_PRODUCT.MOBILEIDENTITYNUMBER_MIN=DAA_OFFER.MOBILEIDENTITYNUMBER_MIN group by DAA_PRODUCT.PRODSTATUS
+2014-01-24 12:33:52,966 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Start process Message
+2014-01-24 12:33:52,966 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - getting connection from pool
+2014-01-24 12:33:52,966 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=0, lastUsedAgoInSec=0, creationTimeAgoInSec=0}
+2014-01-24 12:33:52,967 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - select * from LOW_0_BALANCE where LOW_0_BALANCE_ID = '1'
+2014-01-24 12:33:52,967 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - getNotificationInfo: Statement created
+2014-01-24 12:33:52,968 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - getNotificationInfo: in the while 
+2014-01-24 12:33:52,968 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - getNotificationInfo MIN: 12345
+2014-01-24 12:33:52,968 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - updateLowBalanceInfo lowBalance_id, min: 1, 12345
+2014-01-24 12:33:52,969 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - updateLowBalanceInfo: update LOW_0_BALANCE set NOTIFICATION_DATE = ? , MOBILEIDENTITYNUMBER_MIN = ? , PROCESS_STATUS = ? , SMS_STATUS = ?  where LOW_0_BALANCE_ID = 1
+2014-01-24 12:33:52,973 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - updateLowBalanceInfo date: 2014-01-24 12:33:52.971
+2014-01-24 12:33:52,989 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - updateLowBalanceInfo lowBalance_id, min: UPDATED 1
+2014-01-24 12:33:52,991 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - SELECT * FROM PREVIOUS_WEEK_DATA WHERE MOBILEIDENTITYNUMBER_MIN= '12345'
+2014-01-24 12:33:52,997 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - SELECT * FROM DERIVED_HISTORIC_DATA where MOBILE_IDENTITY_NUMBER= '12345'
+2014-01-24 12:33:53,001 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - SELECT SUM(BALANCE) FROM DAA_PRODUCT WHERE PRODSTATUS = 'ACTIVE' AND MOBILEIDENTITYNUMBER_MIN = '12345'
+2014-01-24 12:33:53,004 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - getControlInfo: query executedselect * from DAA_CONTROL where   ( TRUNC(CURRENT_DATE, 'DDD'  ) - TRUNC(CONTROL_DATE, 'DDD')) =0 
+2014-01-24 12:33:53,034 [Camel thread 10: Threads] DEBUG c.e.d.l.DataManagement - Get Low Balance infor signature= DAACrOfr, DAA
+2014-01-24 12:33:53,045 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: AirtimeReceivedW0overavgw1w4 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,047 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: AirtimeReceivedW0overavgw2w7 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,047 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: AirtimeReceivedmaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: AirtimeReceivedminW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: AirtimeSentW0overavgw1w4 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: AirtimeSentW0overavgw2w7 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: AirtimeSentmaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: AirtimeSentminW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: HighestAirtimeBalW0overavgw1w4 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: HighestAirtimeBalW0overavgw2w7 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: LowestAirtimeBalW0overavgw1w4 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: LowestAirtimeBalW0overavgw2w7 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: LowestAirtimeBallavgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: LowestAirtimeBallmaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,048 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: LowestAirtimeBallminW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: LowestTopupAmtavgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrDaysZerobalW0overavgw1w4 = 0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrDaysZerobalavgW0w5 = 0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrDaysZerobalmaxW0w5 = 0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrDaysZerobalminW0w5 = 0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrTimesZerobalW0overavgw1w4 = 0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrTimesZerobalW0overavgw2w7 = 0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrTimesZerobalavgW0w5 = 0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrTimesZerobalmaxW0w5 = 0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrTimesZerobalminW0w5 = 0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalAmtSpendW0overavgw2w7 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,049 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalAmtSpendAvgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalAmtSpendMaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalAmtSpendMinW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalAmtSpentW0overavgw1w4 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalCallsAmountW0overavgw1w4 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalCallsAmountW0overavgw2w7 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalCallsAmountAvgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalCallsAmountMaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalCallsAmountMinW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalCallsCountW0overavgw1w4 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalCallsCountW0overavgw2w7 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalDataAmtAvgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalDataAmtMaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalDataAmtMinW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,050 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalIntlCallsAmtAvgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalIntlCallsAmtMaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalIntlCallsAmtMinW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalOtherAmtAvgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalOtherAmtMaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalOtherAmtMinW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalPremiumCallsAmtAvgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalPremiumCallsAmtMaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalPremiumCallsAmtMinW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalRoamingCallsAmtAvgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalRoamingCallsAmtMaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalRoamingCallsAmtMinW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalSmsAmtAvgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalSmsAmtMaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,051 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalSmsAmtMinW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalSmsAmountW0overavgw1w4 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalSmsAmountW0overavgw2w7 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalSmsCountW0overavgw1w4 = 0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalSmsCountW0overavgw2w7 = 0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalTopupCountW0overavgw1w4 = 0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalTopupCountW0overavgw2w7 = 0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalTopupCountavgW0w5 = 0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalTopupValueW0overavgw1w4 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalTopupValueW0overavgw2w7 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalTopupValueavgW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalTopupValuemaxW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,052 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalTopupValueminW0w5 = 0.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w3CumAirtimeReceived = 0.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w3CumAirtimeSent = 0.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w3CumHighestAirtimeBalance = 0.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w3CumLowestAirtimeBalance = 0.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w3CumNbrDaysOnZeroBal = 0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w3CumNbrTimesOnZeroBal = 0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w3CumTotalAmountSpent = 5000.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w3CumTotalCallsAmount = 0.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w3CumTotalTopupCount = 15.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w3CumTotalTopupValue = 50000.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w7CumAirtimeReceived = 0.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w7CumAirtimeSent = 0.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w7CumHighestAirtimeBalance = 0.0 Field type: Numeric
+2014-01-24 12:33:53,053 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w7CumLowestAirtimeBalance = 0.0 Field type: Numeric
+2014-01-24 12:33:53,054 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w7CumNbrDaysOnZeroBal = 0 Field type: Numeric
+2014-01-24 12:33:53,054 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w7CumNbrTimesOnZeroBal = 0 Field type: Numeric
+2014-01-24 12:33:53,054 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w7CumTotalAmountSpent = 10000.0 Field type: Numeric
+2014-01-24 12:33:53,054 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w7CumTotalCallsAmount = 0.0 Field type: Numeric
+2014-01-24 12:33:53,054 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w7CumTotalTopupCount = 30 Field type: Numeric
+2014-01-24 12:33:53,054 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: W0w7CumTotalTopupValue = 100000 Field type: Numeric
+2014-01-24 12:33:53,054 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: AirtimeBalanceDue = 0.0 Field type: Numeric
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: AgeOfSubscriber = 30.0 Field type: Numeric
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: BlockStatus =  Field type: String
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: ChannelType = c Field type: String
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: ContractInfoSpare1 = 1.0 Field type: Numeric
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: ContractInfoSpare2 = contractSpare2 Field type: String
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: ContractInfoSpare3 = contractSpare3 Field type: String
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: ContractType = contractType Field type: String
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: CountryCode = Vietnam Field type: String
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: CurrentPlan = currentPlan Field type: String
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: EventCode01 = e Field type: String
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: EventCode02 = Vietnam Field type: String
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: EventCode03 = e Field type: String
+2014-01-24 12:33:53,055 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: HandsetCost = 5.0 Field type: Numeric
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: HighestAirtimeBalanceInWeek = 50000.0 Field type: Numeric
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: HighestTopupAmount = 100000.0 Field type: Numeric
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: Imei = imei12345 Field type: String
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: LowestAirtimeBalanceInWeek = 45000.0 Field type: Numeric
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: LowestTopupAmount = 50000.0 Field type: Numeric
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: Min = 12345 Field type: String
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: MthsSinceSubscriber = 48 Field type: Numeric
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrDaysZeroBalInWeek = 0 Field type: Numeric
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: NbrTimesZeroBalInWeek = 0 Field type: Numeric
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: OutstandingBalance = 0.0 Field type: Numeric
+2014-01-24 12:33:53,056 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: SubscSpare1 = 1.0 Field type: Numeric
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: SubscSpare2 = subscriberSpare2 Field type: String
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: SubscSpare3 = subscriberSpare3 Field type: String
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: SubscriberType = ST Field type: String
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: SubscriberUniqueId = subscriberNumber Field type: String
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TopupMethod = TM Field type: String
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalAmountAirtimeReceived = 0.0 Field type: Numeric
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalAmountAirtimeSent = 0.0 Field type: Numeric
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalAmountSpent = 10.0 Field type: Numeric
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalAmountToppedUp = 50000.0 Field type: Numeric
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalCallsCount = 5 Field type: Numeric
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalInternationalCallsCount = 0 Field type: Numeric
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalOffNetCallsCount = 0 Field type: Numeric
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalOtherCount = 0 Field type: Numeric
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalPremiumCallsCount = 0 Field type: Numeric
+2014-01-24 12:33:53,057 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalRoamingCallsCount = 0 Field type: Numeric
+2014-01-24 12:33:53,058 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalSmsCount = 0 Field type: Numeric
+2014-01-24 12:33:53,058 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalTopupCount = 50 Field type: Numeric
+2014-01-24 12:33:53,058 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalValueData = 50000.0 Field type: Numeric
+2014-01-24 12:33:53,058 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalValueIntlCalls = 0.0 Field type: Numeric
+2014-01-24 12:33:53,058 [Camel thread 10: Threads] TRACE c.e.d.l.DataManagement - Field found: TotalValueOffNetCalls = 0.0 Field type: Numeric
+2014-01-24 12:33:53,383 [Camel thread 10: Threads] TRACE c.e.d.o.IDataToXmlConverterOffer - DataToXmlOffer for offer: DAACrOUT, DAACrOfr
+2014-01-24 12:33:53,398 [Camel thread 10: Threads] TRACE c.e.d.l.DecisionRouting - DecisionRouting: DA result for low balance is ACCEPT
+2014-01-24 12:33:53,398 [Camel thread 10: Threads] DEBUG c.e.d.offer.OfferCreation - getting connection from pool
+2014-01-24 12:33:53,398 [Camel thread 10: Threads] DEBUG c.e.d.offer.OfferCreation - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=0, lastUsedAgoInSec=0, creationTimeAgoInSec=0}
+2014-01-24 12:33:53,401 [Camel thread 10: Threads] TRACE c.e.d.offer.OfferCreation - CREATEOffer: 12345, 206513, fees: 5.0, creditOfferFinal: 123.0 sms status: null
+2014-01-24 12:33:53,401 [Camel thread 10: Threads] INFO c.e.d.offer.OfferCreation - An offer has been created for MIN: 12345, amount: 123.0 fees: 5.0
+2014-01-24 12:33:53,417 [Camel thread 10: Threads] DEBUG c.e.d.offer.OfferCreation - update LOW_0_BALANCE set FINISH_DATE = ? ,PROCESS_STATUS = ? , SMS_STATUS = ?  where LOW_0_BALANCE_ID = 1
+2014-01-24 12:33:53,417 [Camel thread 10: Threads] TRACE c.e.d.offer.OfferCreation - updateNotification: SeqValue: 0
+2014-01-24 12:33:53,420 [Camel thread 10: Threads] DEBUG c.e.d.offer.OfferCreation - SELECT HIBERNATE_SEQUENCE.NEXTVAL FROM DUAL
+2014-01-24 12:33:53,429 [Camel thread 10: Threads] DEBUG c.e.d.offer.OfferCreation - INSERT INTO DAA_CONTROL (CONTROL_DATE) VALUES ( TRUNC(CURRENT_DATE) )
+2014-01-24 12:33:53,433 [Camel thread 10: Threads] TRACE c.e.d.offer.OfferCreation - OfferCreation.updateOfferControl: update DAA_CONTROL SET NUM_OFFERS_SENT = NUM_OFFERS_SENT + 1, OFFER_AMOUNT_SENT = OFFER_AMOUNT_SENT +123.0 WHERE ( TRUNC(CURRENT_DATE, 'DDD'  ) - TRUNC(CONTROL_DATE, 'DDD')) =0 
+2014-01-24 12:33:53,434 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - GenericPrepareTemplate Processing temaplate
+2014-01-24 12:33:53,492 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ProcesstreatmentTreeResults2.TreatmentTreeId, b6cc329c, class java.lang.String
+2014-01-24 12:33:53,495 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ProcesstreatmentTreeResults2.LeafNodeName, &lt;&lt;Leaf Node Name&gt;&gt;, class java.lang.String
+2014-01-24 12:33:53,495 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE reseller, 0033682618213, class java.lang.String
+2014-01-24 12:33:53,496 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ExclusionsdecisionSetterTypicalResult2.DecisionCategory, ACCEPT, class java.lang.String
+2014-01-24 12:33:53,496 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE RiskScorecardscorecardMinimumResults.ScorecardName, Risk_DAA, class java.lang.String
+2014-01-24 12:33:53,496 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ProcesstreatmentTreeResults2.OutcomeId, 7, class java.lang.String
+2014-01-24 12:33:53,496 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ExclusionsdecisionSetterTypicalResult2.SortedDecisionTable[1], DECLINE             DAA DECLINE         D001      , class java.lang.String
+2014-01-24 12:33:53,496 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE FeeCalculation, 5, class java.lang.String
+2014-01-24 12:33:53,497 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ExclusionsdecisionSetterTypicalResult2.SortedReasonCodeTable[1], D001, class java.lang.String
+2014-01-24 12:33:53,497 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE CreditOfferFinal, 123, class java.lang.String
+2014-01-24 12:33:53,497 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE notification_Id, 1, class java.lang.String
+2014-01-24 12:33:53,497 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ProcesstreatmentTreeResults2.LeafNodeId, 1, class java.lang.String
+2014-01-24 12:33:53,497 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE min, 12345, class java.lang.String
+2014-01-24 12:33:53,497 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ExclusionsdecisionSetterTypicalResult2.SortedReasonCodeTable[2], A000, class java.lang.String
+2014-01-24 12:33:53,498 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ExclusionsdecisionSetterTypicalResult2.DecisionSetterId, 7a169de5, class java.lang.String
+2014-01-24 12:33:53,498 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE __ProcessFlowId, OfferFlow, class java.lang.String
+2014-01-24 12:33:53,498 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ws.request.headers, {orgapachecxfheadersHeaderlist=, connection=Keep-Alive, SOAPAction=&quot;&quot;, Host=localhost:8087, Content-Type=application/soap+xml;charset=UTF-8, operationNameSpace=http://ougwebcomponentcomponentsougosgiscorexcom/, Content-Length=513, User-Agent=Apache-HttpClient/411 (java 15), operationName=ougWService, accept-encoding=gzip,deflate}, class org.apache.camel.util.CaseInsensitiveMap
+2014-01-24 12:33:53,498 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE MOBILEIDENTITYNUMBER_MIN, 12345, class java.lang.String
+2014-01-24 12:33:53,499 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ExclusionsdecisionSetterTypicalResult2.DecisionText, DAA DECLINE, class java.lang.String
+2014-01-24 12:33:53,499 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE RiskScorecardscorecardMinimumResults.ScorecardId, 0, class java.lang.String
+2014-01-24 12:33:53,499 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE RiskScorecardscorecardMinimumResults.Score, 1025, class java.lang.String
+2014-01-24 12:33:53,499 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ProcesstreatmentTreeResults2.TreatmentTreeName, DAA Credit Offer Treatment Tree NEW, class java.lang.String
+2014-01-24 12:33:53,499 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ExclusionsdecisionSetterTypicalResult2.SortedDecisionTable[2], ACCEPT              DAA ACCEPT          A000      , class java.lang.String
+2014-01-24 12:33:53,500 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ExclusionsdecisionSetterTypicalResult2.DecisionSetterName, PR_DecSetter DAA Exclusions, class java.lang.String
+2014-01-24 12:33:53,500 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE OFFER_ACTIVE, FALSE, class java.lang.String
+2014-01-24 12:33:53,500 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE OFFER_ID, 206513, class java.lang.Integer
+2014-01-24 12:33:53,500 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ProcesstreatmentTreeResults2.OutcomeName, DO NOTHING, class java.lang.String
+2014-01-24 12:33:53,500 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE output, LcomexperianedaenterprisedaprocessorDAData;@46de9c, class [Lcom.experian.eda.enterprise.da.processor.DAData;
+2014-01-24 12:33:53,568 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - node processing finished<?xml version="1.0" encoding="UTF-8"?><message>
+<ProcesstreatmentTreeResults2TreatmentTreeId>b6cc329c</ProcesstreatmentTreeResults2TreatmentTreeId>
+<ProcesstreatmentTreeResults2LeafNodeName>&lt;&lt;Leaf Node Name&gt;&gt;</ProcesstreatmentTreeResults2LeafNodeName>
+<reseller>0033682618213</reseller>
+<ExclusionsdecisionSetterTypicalResult2DecisionCategory>ACCEPT</ExclusionsdecisionSetterTypicalResult2DecisionCategory>
+<RiskScorecardscorecardMinimumResultsScorecardName>Risk_DAA</RiskScorecardscorecardMinimumResultsScorecardName>
+<ProcesstreatmentTreeResults2OutcomeId>7</ProcesstreatmentTreeResults2OutcomeId>
+<ExclusionsdecisionSetterTypicalResult2SortedDecisionTable1>DECLINE             DAA DECLINE         D001      </ExclusionsdecisionSetterTypicalResult2SortedDecisionTable1>
+<FeeCalculation>5</FeeCalculation>
+<ExclusionsdecisionSetterTypicalResult2SortedReasonCodeTable1>D001</ExclusionsdecisionSetterTypicalResult2SortedReasonCodeTable1>
+<CreditOfferFinal>123</CreditOfferFinal>
+<notification_Id>1</notification_Id>
+<ProcesstreatmentTreeResults2LeafNodeId>1</ProcesstreatmentTreeResults2LeafNodeId>
+<min>12345</min>
+<ExclusionsdecisionSetterTypicalResult2SortedReasonCodeTable2>A000</ExclusionsdecisionSetterTypicalResult2SortedReasonCodeTable2>
+<ExclusionsdecisionSetterTypicalResult2DecisionSetterId>7a169de5</ExclusionsdecisionSetterTypicalResult2DecisionSetterId>
+<__ProcessFlowId>OfferFlow</__ProcessFlowId>
+<wsrequestheaders>{org.apache.cxf.headers.Header.list=[], connection=Keep-Alive, SOAPAction="", Host=localhost:8087, Content-Type=application/soap+xml;charset=UTF-8, operationNameSpace=http://ougwebcomponent.components.oug.osgi.scorex.com/, Content-Length=513, User-Agent=Apache-HttpClient/4.1.1 (java 1.5), operationName=ougWService, accept-encoding=gzip,deflate}</wsrequestheaders>
+<MOBILEIDENTITYNUMBER_MIN>12345</MOBILEIDENTITYNUMBER_MIN>
+<ExclusionsdecisionSetterTypicalResult2DecisionText>DAA DECLINE</ExclusionsdecisionSetterTypicalResult2DecisionText>
+<RiskScorecardscorecardMinimumResultsScorecardId>0</RiskScorecardscorecardMinimumResultsScorecardId>
+<RiskScorecardscorecardMinimumResultsScore>1025</RiskScorecardscorecardMinimumResultsScore>
+<ProcesstreatmentTreeResults2TreatmentTreeName>DAA Credit Offer Treatment Tree NEW</ProcesstreatmentTreeResults2TreatmentTreeName>
+<ExclusionsdecisionSetterTypicalResult2SortedDecisionTable2>ACCEPT              DAA ACCEPT          A000      </ExclusionsdecisionSetterTypicalResult2SortedDecisionTable2>
+<ExclusionsdecisionSetterTypicalResult2DecisionSetterName>PR_DecSetter DAA Exclusions</ExclusionsdecisionSetterTypicalResult2DecisionSetterName>
+<OFFER_ACTIVE>FALSE</OFFER_ACTIVE>
+<OFFER_ID>206513</OFFER_ID>
+<ProcesstreatmentTreeResults2OutcomeName>DO NOTHING</ProcesstreatmentTreeResults2OutcomeName>
+<output>[Lcom.experian.eda.enterprise.da.processor.DAData;@46de9c</output>
+<validity>24</validity>
+</message>
+
+2014-01-24 12:33:53,568 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - END PROCESSING TEMPLATE
+2014-01-24 12:33:53,955 [Camel thread 10: Threads] TRACE c.e.daa.common.PrepareSMS - Prepare SMS , sms body is : TK chinh cua ban con 5000d.Ban co muon ung 123d tu MobiFone? Tien ung & phi DV 5d se dc tru o TK chinh trong lan nap toi. Soan Y de dong y trong 24h!
+2014-01-24 12:33:54,043 [Camel thread 10: Threads] DEBUG c.e.d.common.EmptyScript - Connecting to server smpp3.infobip.com:8888with user :emaibsms, sms body is : TK chinh cua ban con 5000d.Ban co muon ung 123d tu MobiFone? Tien ung & phi DV 5d se dc tru o TK chinh trong lan nap toi. Soan Y de dong y trong 24h!
+2014-01-24 12:33:54,301 [Camel thread 10: Threads] DEBUG c.e.d.common.EmptyScript - Submiting Message ...
+2014-01-24 12:33:54,561 [Camel thread 10: Threads] DEBUG c.ema.daa.lowbal.updateDB - getting connection from pool
+2014-01-24 12:33:54,562 [Camel thread 10: Threads] DEBUG c.ema.daa.lowbal.updateDB - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=1, lastUsedAgoInSec=1, creationTimeAgoInSec=1}
+2014-01-24 12:33:54,562 [Camel thread 10: Threads] TRACE c.ema.daa.lowbal.updateDB - update Low balance info
+2014-01-24 12:33:54,563 [Camel thread 10: Threads] DEBUG c.ema.daa.lowbal.updateDB - update LOW_0_BALANCE set FINISH_DATE = CURRENT_TIMESTAMP ,PROCESS_STATUS = ? , SMS_STATUS = ?  where LOW_0_BALANCE_ID = 1
+2014-01-24 12:33:54,563 [Camel thread 10: Threads] TRACE c.ema.daa.lowbal.updateDB - updateLowBalanceInfo: SeqValue: 0
+2014-01-24 12:33:54,565 [Camel thread 10: Threads] DEBUG c.ema.daa.lowbal.updateDB - update DAA_OFFER set SMS_STATUS = ? WHERE daa_offer_id = ?
+2014-01-24 12:33:54,565 [Camel thread 10: Threads] TRACE c.ema.daa.lowbal.updateDB - updateOfferStatus SMS: SeqValue: 0
+2014-01-24 12:34:21,183 [Camel thread 10: Threads] DEBUG c.e.d.c.LoadSystemProperties - Loading properties ...
+2014-01-24 12:34:21,184 [Camel thread 10: Threads] DEBUG c.e.d.c.LoadSystemProperties - Properties Loaded.
+2014-01-24 12:34:21,185 [Camel thread 10: Threads] TRACE c.e.d.c.LoadSystemProperties - Properties : [sourcePhoneNumber:0033682618213, file.encoding.pkg:sun.io, client.solution.home:E:\Prod\DynamicAdvancedAirtime\daa_connectivity, billing.account:anAccount, java.home:C:/Program Files/Java/jdk1.7.0, atb.web.service.url:http://10.158.12.158:8085, smsPassword:XbwbuT, jdbc.connection.pool.DAA_CONNECTION_POOL.password:telco, jdbc.connection.pool.DAA_CONNECTION_POOL.partitionCount:1, ibm.trustStore.password:password, oracle.initialSize:1, template.pds.service.socket.timeout:30000, jetty.ssl.keypassword:password, java.endorsed.dirs:C:\Program Files (x86)\Java\jre7\lib\endorsed, db2.username:db2admin, mssql.url:jdbc:sqlserver://10.158.12.214:1433;databaseName=interfacebroker_dev;integratedSecurity=true, smsResponse.OK:OK, sun.os.patch.level:Service Pack 1, java.vendor.url:http://java.oracle.com/, java.version:1.7.0_21, mysql.maxActive:2, wrapper.version:3.3.1, openam.service.password:UrlAccessAgent123, java.vendor.url.bug:http://bugreport.sun.com/bugreport/, template.pds.service.protocol:http, template.pds.service.server.name:localhost, hostName:EAP0405, user.name:SYSTEM, sun.io.unicode.encoding:UnicodeLittle, sun.jnu.encoding:Cp1252, java.runtime.name:Java(TM) SE Runtime Environment, smsLogin:emaibsms, wrapper.key:9tbmz9bMY3XI-KWM, java.specification.name:Java Platform API Specification, user.timezone:Europe/Paris, port:1414, mssql.driverClassName:com.microsoft.sqlserver.jdbc.SQLServerDriver, openam.authentication.url:http://localhost:8080/sso/identityservices/IdentityServices, user.script:, path.separator:;, wrapper.port:32000, offer.finishDate:24, file.encoding:UTF-8, mysql.password:dev_interfacebroker, javax.net.ssl.keyStore:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/key/ibmmq/keystore.jks, sun.java.command:org.tanukisoftware.wrapper.WrapperSimpleApp com.experian.eda.enterprise.startup.Bootstrap -fa E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system/camel-context.xml, ibm.keyStore.password:password, jetty.keyStore.file:${client.solution.home}/key/jetty/serverKeys, openam.naming.service.url:http://localhost:8080/sso/namingservice, strategy.input.signature:DAA, temp.storage.path:/storage, oracle.url:jdbc:oracle:thin:@10.158.12.214:1521:XE, csv.path.reimb:E:\TMP\DynamicAdvancedAirtime\daa_connectivity\strategy\DAAReimb.csv, java.io.tmpdir:C:\Windows\system32\config\systemprofile\AppData\Local\Temp\, smsPort:8888, user.language:fr, groovy.source.encoding:UTF-8, javax.net.ssl.trustStorePassword:password, line.separator:
+, template.pds.service.path.to.service:/remoting/template-pds, login.service.protocol:http, template.pds.service.port:8888, login.service.socket.timeout:30000, app.dir:${client.solution.home}, ibm.keyStore.file:${client.solution.home}/key/ibmmq/keystore.jks, mysql.driverClassName:com.mysql.jdbc.Driver, java.vm.info:mixed mode, sharing, sun.desktop:windows, oracle.username:interfacebroker_dev, java.vm.specification.name:Java Virtual Machine Specification, wrapper.jvm.port.max:31999, wrapper.pid:18616, mysql.initialSize:1, oracle.driverClassName:oracle.jdbc.driver.OracleDriver, strategy.input.alias.reimb:DAAReimb, javax.net.ssl.keyStorePassword:password, activemq.keyStore.file:${client.solution.home}/key/activemq/client.ks, jdbc.connection.pool.DAA_CONNECTION_POOL.username:client_1, java.awt.printerjob:sun.awt.windows.WPrinterJob, jdbc.connection.pool.DAA_CONNECTION_POOL.jdbcUrl:jdbc:oracle:thin:@localhost:1521:XE, jetty.keyStore.password:password, db2.maxActive:2, javax.net.ssl.trustStore:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/key/ibmmq/truststore.jks, billing.password:aPassword, rds.ib.storage.connection.timeout:5000, rds.ib.storage.max.total.connections:8, login.service.path.to.service:/remoting/LoginService, mssql.password:Experian789, template.pds.service.connection.timeout:5000, smsHost:smpp3.infobip.com, csv.path.offer:E:\TMP\DynamicAdvancedAirtime\daa_connectivity\strategy\DAACrOfr.csv, db2.driverClassName:com.ibm.db2.jcc.DB2Driver, os.name:Windows 7, java.specification.vendor:Oracle Corporation, transportType:1, java.vm.name:Java HotSpot(TM) Client VM, jetty.ssl.password:ENC{Mvb9qOhyg4sim4mgi0NJQw==}, template.pds.service.max.total.connections:8, ibm.trustStore.file:${client.solution.home}/key/ibmmq/truststore.jks, java.library.path:E:\TMP\DynamicAdvancedAirtime\UG_1_4_HFE/lib, wrapper.java.pid:14640, rds.ib.storage.path.to.service:/remoting/rds-service, java.class.version:51.0, login.service.port:8888, rds.ib.storage.protocol:http, channel:mktest.channel, mssql.maxActive:2, java.util.logging.config.file:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system/debug.properties, strategy.input.alias.offer:DAACrOfr, oracle.maxActive:2, wrapper.native_library:wrapper, sslCipherSuite:SSL_RSA_WITH_NULL_MD5, logback.configurationFile:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system/logback.xml, sun.boot.library.path:C:\Program Files (x86)\Java\jre7\bin, mysql.username:interfacebroker_dev, jdbc.connection.pool.DAA_CONNECTION_POOL.minConnectionsPerPartition:5, login.service.server.name:localhost, sun.management.compiler:HotSpot Client Compiler, java.awt.graphicsenv:sun.awt.Win32GraphicsEnvironment, user.variant:, smsResponse.ACTIVATE:ACTIVATE, wrapper.cpu.timeout:10, rds.ib.storage.port:8888, wrapper.jvmid:1, connectivity.service.url:http://localhost:8081/connectivity-service, smsResponse.STOP:STOP, db2.password:qaQA12!@, java.vm.specification.version:1.7, awt.toolkit:sun.awt.windows.WToolkit, sun.cpu.isalist:pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86, rds.ib.storage.socket.timeout:30000, login.service.connection.timeout:5000, java.ext.dirs:C:\Program Files (x86)\Java\jre7\lib\ext;C:\Windows\Sun\Java\lib\ext, os.version:6.1, user.home:C:\, java.vm.vendor:Oracle Corporation, queueManager:mktest.qm, wrapper.jvm.port.min:31000, user.dir:E:\Prod\DynamicAdvancedAirtime\daa_connectivity, transacthookservice.url:http://localhost:8092/TransactHookService, strategy.output.layout.reimb:DAAROUT, mssql.initialSize:1, mssql.username:experianapwilliamc, atb.authentication.password:atb_password, sun.cpu.endian:little, db2.url:jdbc:db2://10.158.12.141:50000/SAMPLE, openam.service.userid:UrlAccessAgent, ipfservice.url:http://localhost:8092/IPFService, strategy.output.dataKey:data, interfacepack.service.url:http://localhost:8081/ib-service, activemq.keyStore.password:password, wrapper.service:TRUE, derby.stream.error.file:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/logs/derby.log, java.vm.version:23.21-b01, java.class.path:E:\TMP\DynamicAdvancedAirtime\UG_1_4_HFE/lib/wrapper.jar;.;C:\Program Files\PowerCurve\Connectivity\Connectivity v1.2SP3/lib/core/enterprise-bootstrap.jar;E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system, os.arch:x86, openam.authentication.url.wsdl:${openam.authentication.url}?WSDL, sun.java.launcher:SUN_STANDARD, mysql.url:jdbc:mysql://10.158.12.211:3306/interfacebroker_dev, ib.home:C:\Program Files\PowerCurve\Connectivity\Connectivity v1.2SP3, login.service.max.total.connections:8, java.vm.specification.vendor:Oracle Corporation, file.separator:\, jetty.ssl.keystore:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/key/jetty/serverKeys, java.runtime.version:1.7.0_21-b11, jdbc.connection.pool.DAA_CONNECTION_POOL.maxConnectionsPerPartition:5, sun.boot.class.path:C:\Program Files (x86)\Java\jre7\lib\resources.jar;C:\Program Files (x86)\Java\jre7\lib\rt.jar;C:\Program Files (x86)\Java\jre7\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre7\lib\jsse.jar;C:\Program Files (x86)\Java\jre7\lib\jce.jar;C:\Program Files (x86)\Java\jre7\lib\charsets.jar;C:\Program Files (x86)\Java\jre7\lib\jfr.jar;C:\Program Files (x86)\Java\jre7\classes, rds.ib.storage.server.name:localhost, user.country:FR, activemq.trustStore.file:${client.solution.home}/key/activemq/client.ts, atb.authentication.subcode:atb_user, ibservice.url:http://localhost:8092/IBService, java.vendor:Oracle Corporation, db2.initialSize:1, strategy.output.layout.offer:DAACrOUT, java.specification.version:1.7, oracle.password:dev_interfacebroker, sun.arch.data.model:32]
+2014-01-24 12:34:21,185 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Calling init method more than once. Skipping.
+2014-01-24 12:34:21,193 [Camel thread 10: Threads] DEBUG c.e.daa.common.ProcessSms - Billing operation flag : 1
+2014-01-24 12:34:21,194 [Camel thread 10: Threads] DEBUG c.e.daa.common.ProcessSms - getting connection from pool
+2014-01-24 12:34:21,197 [Camel thread 10: Threads] DEBUG c.e.daa.common.ProcessSms - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=28, lastUsedAgoInSec=28, creationTimeAgoInSec=28}
+2014-01-24 12:34:21,202 [Camel thread 10: Threads] DEBUG c.e.daa.common.ProcessSms - topupinfo: query executed: SELECT * FROM SMS_NOTIFICATION WHERE SMS_ID = null
+2014-01-24 12:34:21,203 [Camel thread 10: Threads] TRACE c.e.daa.common.ProcessSms - MIN IS 12345
+2014-01-24 12:34:21,320 [Camel thread 10: Threads] DEBUG c.e.daa.common.ProcessSms - lock_id: 1390563261283
+2014-01-24 12:34:21,320 [Camel thread 10: Threads] TRACE c.e.daa.common.ProcessSms - OFFER_LOCK IS 1390563261283
+2014-01-24 12:34:21,320 [Camel thread 10: Threads] DEBUG c.e.daa.common.ProcessSms - updateOffer query is update DAA_OFFER set LOCK_KEY = '1390563261283' WHERE LOCK_KEY IS NULL AND MOBILEIDENTITYNUMBER_MIN = '12345'
+2014-01-24 12:34:21,340 [Camel thread 10: Threads] DEBUG c.e.daa.common.ProcessSms - end updateOffer, result is 1
+2014-01-24 12:34:21,340 [Camel thread 10: Threads] DEBUG c.e.daa.common.ProcessSms - SELECT CURRENT_TIMESTAMP, VALIDITY_DATE, DAA_OFFER_ID, MOBILEIDENTITYNUMBER_MIN, AMOUNT_OFFER, FEES, SMS_STATUS FROM DAA_OFFER where LOCK_KEY = '1390563261283' AND MOBILEIDENTITYNUMBER_MIN = '12345'
+2014-01-24 12:34:21,345 [Camel thread 10: Threads] TRACE c.e.daa.common.ProcessSms - validy date is: 2014-01-25
+2014-01-24 12:34:21,345 [Camel thread 10: Threads] TRACE c.e.daa.common.ProcessSms - offer not EXPIRED
+2014-01-24 12:34:21,345 [Camel thread 10: Threads] TRACE c.e.daa.common.ProcessSms - end getOffer
+2014-01-24 12:34:21,347 [Camel thread 10: Threads] DEBUG c.e.daa.common.ProcessSms - SELECT * FROM LOW_0_BALANCE WHERE MOBILEIDENTITYNUMBER_MIN = '12345' AND PROCESS_STATUS = 'ACCEPT' AND SMS_STATUS IS NOT NULL
+2014-01-24 12:34:21,347 [Camel thread 10: Threads] TRACE c.e.d.a.CheckSMSAnswer - SMS Answer is: OK
+2014-01-24 12:34:21,347 [Camel thread 10: Threads] DEBUG c.e.d.a.CheckSMSAnswer - Is offer OK
+2014-01-24 12:34:21,348 [Camel thread 10: Threads] DEBUG c.e.d.o.UpdateOfferAcceptFlag - getting connection from pool
+2014-01-24 12:34:21,348 [Camel thread 10: Threads] DEBUG c.e.d.o.UpdateOfferAcceptFlag - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=28, lastUsedAgoInSec=28, creationTimeAgoInSec=28}
+2014-01-24 12:34:21,348 [Camel thread 10: Threads] DEBUG c.e.d.o.UpdateOfferAcceptFlag - updateOffer: update DAA_OFFER set OFFER_ACCEPTANCE_FLAG = ? WHERE DAA_OFFER_ID = 206513, 1
+2014-01-24 12:34:21,351 [Camel thread 10: Threads] TRACE c.e.d.c.PrepareBillingCall - AMOUNT_OFFER: null
+2014-01-24 12:34:21,352 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - GenericPrepareTemplate Processing temaplate
+2014-01-24 12:34:21,353 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE SMS_CONTENT, OK, class java.lang.String
+2014-01-24 12:34:21,353 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE min, 12345, class java.lang.String
+2014-01-24 12:34:21,353 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE DAA_OFFER_ID, 206513, class java.lang.Integer
+2014-01-24 12:34:21,354 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE OFFER_LOCK, 1390563261283, class java.lang.String
+2014-01-24 12:34:21,354 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE OFFER_EXPIRED, FALSE, class java.lang.String
+2014-01-24 12:34:21,354 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE __ProcessFlowId, AcceptanceFlow, class java.lang.String
+2014-01-24 12:34:21,354 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE SMS_STATUS, 024012411335729144, class java.lang.String
+2014-01-24 12:34:21,354 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE MOBILEIDENTITYNUMBER_MIN, 12345, class java.lang.String
+2014-01-24 12:34:21,354 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ws.request.headers, {User-Agent=Apache-HttpClient/411 (java 15), connection=Keep-Alive, Content-Type=application/soap+xml;charset=UTF-8, operationName=ougWService, Content-Length=524, SOAPAction=&quot;&quot;, operationNameSpace=http://ougwebcomponentcomponentsougosgiscorexcom/, orgapachecxfheadersHeaderlist=, accept-encoding=gzip,deflate, Host=localhost:8087}, class org.apache.camel.util.CaseInsensitiveMap
+2014-01-24 12:34:21,355 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE FEES, 50, class java.lang.Float
+2014-01-24 12:34:21,355 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE AMOUNT_OFFER, 1230, class java.lang.Float
+2014-01-24 12:34:21,355 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE reseller, 0033682618213, class java.lang.String
+2014-01-24 12:34:21,355 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE SMS_PROCESS, YES, class java.lang.String
+2014-01-24 12:34:21,355 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE password, aPassword, class java.lang.String
+2014-01-24 12:34:21,355 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE amount, 123, class java.lang.Integer
+2014-01-24 12:34:21,355 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE DAA_PRODUCT_ID, -1, class java.lang.Long
+2014-01-24 12:34:21,356 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE flag, 1, class java.lang.String
+2014-01-24 12:34:21,356 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE IS_OFFER_OK, 1, class java.lang.Integer
+2014-01-24 12:34:21,356 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE account, anAccount, class java.lang.String
+2014-01-24 12:34:21,356 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE transid_request, 0, class java.lang.String
+2014-01-24 12:34:21,356 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE VALIDITY_DATE, 2014-01-25, class java.sql.Date
+2014-01-24 12:34:21,357 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - node processing finished<?xml version="1.0" encoding="UTF-8"?><message>
+<SMS_CONTENT>OK</SMS_CONTENT>
+<min>12345</min>
+<DAA_OFFER_ID>206513</DAA_OFFER_ID>
+<OFFER_LOCK>1390563261283</OFFER_LOCK>
+<OFFER_EXPIRED>FALSE</OFFER_EXPIRED>
+<__ProcessFlowId>AcceptanceFlow</__ProcessFlowId>
+<SMS_STATUS>024012411335729144</SMS_STATUS>
+<MOBILEIDENTITYNUMBER_MIN>12345</MOBILEIDENTITYNUMBER_MIN>
+<wsrequestheaders>{User-Agent=Apache-HttpClient/4.1.1 (java 1.5), connection=Keep-Alive, Content-Type=application/soap+xml;charset=UTF-8, operationName=ougWService, Content-Length=524, SOAPAction="", operationNameSpace=http://ougwebcomponent.components.oug.osgi.scorex.com/, org.apache.cxf.headers.Header.list=[], accept-encoding=gzip,deflate, Host=localhost:8087}</wsrequestheaders>
+<FEES>5.0</FEES>
+<AMOUNT_OFFER>123.0</AMOUNT_OFFER>
+<reseller>0033682618213</reseller>
+<SMS_PROCESS>YES</SMS_PROCESS>
+<password>aPassword</password>
+<amount>123</amount>
+<DAA_PRODUCT_ID>-1</DAA_PRODUCT_ID>
+<flag>1</flag>
+<IS_OFFER_OK>1</IS_OFFER_OK>
+<account>anAccount</account>
+<transid_request>0</transid_request>
+<VALIDITY_DATE>2014-01-25</VALIDITY_DATE>
+<validity>24</validity>
+</message>
+
+2014-01-24 12:34:21,357 [Camel thread 10: Threads] TRACE c.e.d.c.GenericPrepareTemplate - END PROCESSING TEMPLATE
+2014-01-24 12:34:21,498 [Camel thread 12: Threads] DEBUG c.e.d.c.LoadSystemProperties - Loading properties ...
+2014-01-24 12:34:21,499 [Camel thread 12: Threads] DEBUG c.e.d.c.LoadSystemProperties - Properties Loaded.
+2014-01-24 12:34:21,499 [Camel thread 12: Threads] TRACE c.e.d.c.LoadSystemProperties - Properties : [sourcePhoneNumber:0033682618213, file.encoding.pkg:sun.io, client.solution.home:E:\Prod\DynamicAdvancedAirtime\daa_connectivity, billing.account:anAccount, java.home:C:/Program Files/Java/jdk1.7.0, atb.web.service.url:http://10.158.12.158:8085, smsPassword:XbwbuT, jdbc.connection.pool.DAA_CONNECTION_POOL.password:telco, jdbc.connection.pool.DAA_CONNECTION_POOL.partitionCount:1, ibm.trustStore.password:password, oracle.initialSize:1, template.pds.service.socket.timeout:30000, jetty.ssl.keypassword:password, java.endorsed.dirs:C:\Program Files (x86)\Java\jre7\lib\endorsed, db2.username:db2admin, mssql.url:jdbc:sqlserver://10.158.12.214:1433;databaseName=interfacebroker_dev;integratedSecurity=true, smsResponse.OK:OK, sun.os.patch.level:Service Pack 1, java.vendor.url:http://java.oracle.com/, java.version:1.7.0_21, mysql.maxActive:2, wrapper.version:3.3.1, openam.service.password:UrlAccessAgent123, java.vendor.url.bug:http://bugreport.sun.com/bugreport/, template.pds.service.protocol:http, template.pds.service.server.name:localhost, hostName:EAP0405, user.name:SYSTEM, sun.io.unicode.encoding:UnicodeLittle, sun.jnu.encoding:Cp1252, java.runtime.name:Java(TM) SE Runtime Environment, smsLogin:emaibsms, wrapper.key:9tbmz9bMY3XI-KWM, java.specification.name:Java Platform API Specification, user.timezone:Europe/Paris, port:1414, mssql.driverClassName:com.microsoft.sqlserver.jdbc.SQLServerDriver, openam.authentication.url:http://localhost:8080/sso/identityservices/IdentityServices, user.script:, path.separator:;, wrapper.port:32000, offer.finishDate:24, file.encoding:UTF-8, mysql.password:dev_interfacebroker, javax.net.ssl.keyStore:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/key/ibmmq/keystore.jks, sun.java.command:org.tanukisoftware.wrapper.WrapperSimpleApp com.experian.eda.enterprise.startup.Bootstrap -fa E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system/camel-context.xml, ibm.keyStore.password:password, jetty.keyStore.file:${client.solution.home}/key/jetty/serverKeys, openam.naming.service.url:http://localhost:8080/sso/namingservice, strategy.input.signature:DAA, temp.storage.path:/storage, oracle.url:jdbc:oracle:thin:@10.158.12.214:1521:XE, csv.path.reimb:E:\TMP\DynamicAdvancedAirtime\daa_connectivity\strategy\DAAReimb.csv, java.io.tmpdir:C:\Windows\system32\config\systemprofile\AppData\Local\Temp\, smsPort:8888, user.language:fr, groovy.source.encoding:UTF-8, javax.net.ssl.trustStorePassword:password, line.separator:
+, template.pds.service.path.to.service:/remoting/template-pds, login.service.protocol:http, template.pds.service.port:8888, login.service.socket.timeout:30000, app.dir:${client.solution.home}, ibm.keyStore.file:${client.solution.home}/key/ibmmq/keystore.jks, mysql.driverClassName:com.mysql.jdbc.Driver, java.vm.info:mixed mode, sharing, sun.desktop:windows, oracle.username:interfacebroker_dev, java.vm.specification.name:Java Virtual Machine Specification, wrapper.jvm.port.max:31999, wrapper.pid:18616, mysql.initialSize:1, oracle.driverClassName:oracle.jdbc.driver.OracleDriver, strategy.input.alias.reimb:DAAReimb, javax.net.ssl.keyStorePassword:password, activemq.keyStore.file:${client.solution.home}/key/activemq/client.ks, jdbc.connection.pool.DAA_CONNECTION_POOL.username:client_1, java.awt.printerjob:sun.awt.windows.WPrinterJob, jdbc.connection.pool.DAA_CONNECTION_POOL.jdbcUrl:jdbc:oracle:thin:@localhost:1521:XE, jetty.keyStore.password:password, db2.maxActive:2, javax.net.ssl.trustStore:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/key/ibmmq/truststore.jks, billing.password:aPassword, rds.ib.storage.connection.timeout:5000, rds.ib.storage.max.total.connections:8, login.service.path.to.service:/remoting/LoginService, mssql.password:Experian789, template.pds.service.connection.timeout:5000, smsHost:smpp3.infobip.com, csv.path.offer:E:\TMP\DynamicAdvancedAirtime\daa_connectivity\strategy\DAACrOfr.csv, db2.driverClassName:com.ibm.db2.jcc.DB2Driver, os.name:Windows 7, java.specification.vendor:Oracle Corporation, transportType:1, java.vm.name:Java HotSpot(TM) Client VM, jetty.ssl.password:ENC{Mvb9qOhyg4sim4mgi0NJQw==}, template.pds.service.max.total.connections:8, ibm.trustStore.file:${client.solution.home}/key/ibmmq/truststore.jks, java.library.path:E:\TMP\DynamicAdvancedAirtime\UG_1_4_HFE/lib, wrapper.java.pid:14640, rds.ib.storage.path.to.service:/remoting/rds-service, java.class.version:51.0, login.service.port:8888, rds.ib.storage.protocol:http, channel:mktest.channel, mssql.maxActive:2, java.util.logging.config.file:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system/debug.properties, strategy.input.alias.offer:DAACrOfr, oracle.maxActive:2, wrapper.native_library:wrapper, sslCipherSuite:SSL_RSA_WITH_NULL_MD5, logback.configurationFile:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system/logback.xml, sun.boot.library.path:C:\Program Files (x86)\Java\jre7\bin, mysql.username:interfacebroker_dev, jdbc.connection.pool.DAA_CONNECTION_POOL.minConnectionsPerPartition:5, login.service.server.name:localhost, sun.management.compiler:HotSpot Client Compiler, java.awt.graphicsenv:sun.awt.Win32GraphicsEnvironment, user.variant:, smsResponse.ACTIVATE:ACTIVATE, wrapper.cpu.timeout:10, rds.ib.storage.port:8888, wrapper.jvmid:1, connectivity.service.url:http://localhost:8081/connectivity-service, smsResponse.STOP:STOP, db2.password:qaQA12!@, java.vm.specification.version:1.7, awt.toolkit:sun.awt.windows.WToolkit, sun.cpu.isalist:pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86, rds.ib.storage.socket.timeout:30000, login.service.connection.timeout:5000, java.ext.dirs:C:\Program Files (x86)\Java\jre7\lib\ext;C:\Windows\Sun\Java\lib\ext, os.version:6.1, user.home:C:\, java.vm.vendor:Oracle Corporation, queueManager:mktest.qm, wrapper.jvm.port.min:31000, user.dir:E:\Prod\DynamicAdvancedAirtime\daa_connectivity, transacthookservice.url:http://localhost:8092/TransactHookService, strategy.output.layout.reimb:DAAROUT, mssql.initialSize:1, mssql.username:experianapwilliamc, atb.authentication.password:atb_password, sun.cpu.endian:little, db2.url:jdbc:db2://10.158.12.141:50000/SAMPLE, openam.service.userid:UrlAccessAgent, ipfservice.url:http://localhost:8092/IPFService, strategy.output.dataKey:data, interfacepack.service.url:http://localhost:8081/ib-service, activemq.keyStore.password:password, wrapper.service:TRUE, derby.stream.error.file:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/logs/derby.log, java.vm.version:23.21-b01, java.class.path:E:\TMP\DynamicAdvancedAirtime\UG_1_4_HFE/lib/wrapper.jar;.;C:\Program Files\PowerCurve\Connectivity\Connectivity v1.2SP3/lib/core/enterprise-bootstrap.jar;E:\Prod\DynamicAdvancedAirtime\daa_connectivity/conf/system, os.arch:x86, openam.authentication.url.wsdl:${openam.authentication.url}?WSDL, sun.java.launcher:SUN_STANDARD, mysql.url:jdbc:mysql://10.158.12.211:3306/interfacebroker_dev, ib.home:C:\Program Files\PowerCurve\Connectivity\Connectivity v1.2SP3, login.service.max.total.connections:8, java.vm.specification.vendor:Oracle Corporation, file.separator:\, jetty.ssl.keystore:E:\Prod\DynamicAdvancedAirtime\daa_connectivity/key/jetty/serverKeys, java.runtime.version:1.7.0_21-b11, jdbc.connection.pool.DAA_CONNECTION_POOL.maxConnectionsPerPartition:5, sun.boot.class.path:C:\Program Files (x86)\Java\jre7\lib\resources.jar;C:\Program Files (x86)\Java\jre7\lib\rt.jar;C:\Program Files (x86)\Java\jre7\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jre7\lib\jsse.jar;C:\Program Files (x86)\Java\jre7\lib\jce.jar;C:\Program Files (x86)\Java\jre7\lib\charsets.jar;C:\Program Files (x86)\Java\jre7\lib\jfr.jar;C:\Program Files (x86)\Java\jre7\classes, rds.ib.storage.server.name:localhost, user.country:FR, activemq.trustStore.file:${client.solution.home}/key/activemq/client.ts, atb.authentication.subcode:atb_user, ibservice.url:http://localhost:8092/IBService, java.vendor:Oracle Corporation, db2.initialSize:1, strategy.output.layout.offer:DAACrOUT, java.specification.version:1.7, oracle.password:dev_interfacebroker, sun.arch.data.model:32]
+2014-01-24 12:34:21,499 [Camel thread 12: Threads] DEBUG c.e.c.c.ConnectionPool - Calling init method more than once. Skipping.
+2014-01-24 12:34:21,499 [Camel thread 12: Threads] DEBUG c.e.d.bill.GetSessionInfo - IN GetSessionInfo
+2014-01-24 12:34:21,499 [Camel thread 12: Threads] DEBUG c.e.d.bill.GetSessionInfo - getting connection from pool
+2014-01-24 12:34:21,500 [Camel thread 12: Threads] DEBUG c.e.d.bill.GetSessionInfo - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=28, lastUsedAgoInSec=28, creationTimeAgoInSec=28}
+2014-01-24 12:34:21,500 [Camel thread 12: Threads] TRACE c.e.d.bill.GetSessionInfo - GetSessionInfo: Connected to database
+2014-01-24 12:34:21,501 [Camel thread 12: Threads] DEBUG c.e.d.bill.GetSessionInfo - Getting session Info is: xxxxxx
+2014-01-24 12:34:21,501 [Camel thread 12: Threads] TRACE c.e.d.bill.GetSessionInfo - Session id is: xxxxxx
+2014-01-24 12:34:21,502 [Camel thread 12: Threads] DEBUG c.e.d.bill.ExistsSession - Checking if we have any session in the DB: xxxxxx
+2014-01-24 12:34:21,502 [Camel thread 12: Threads] DEBUG c.e.d.bill.ExistsSession - Session exists: xxxxxx
+2014-01-24 12:34:21,502 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - GenericPrepareTemplate Processing temaplate
+2014-01-24 12:34:21,503 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE amount, 123, class java.lang.String
+2014-01-24 12:34:21,503 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE flag, 1, class java.lang.String
+2014-01-24 12:34:21,504 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE __ProcessFlowId, Billing, class java.lang.String
+2014-01-24 12:34:21,504 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE sessionId, xxxxxx, class java.lang.String
+2014-01-24 12:34:21,504 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE pin, 123456, class java.lang.String
+2014-01-24 12:34:21,504 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE initiator, ut_mbt, class java.lang.String
+2014-01-24 12:34:21,504 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE ws.request.headers, {Expect=100-continue, Host=localhost:8089, operationName=ougWService, connection=Keep-Alive, Content-Length=1073, User-Agent=Apache-HttpClient/40 (java 15), Content-Type=application/soap+xml;charset=UTF-8, operationNameSpace=http://ougwebcomponentcomponentsougosgiscorexcom/, orgapachecxfheadersHeaderlist=}, class org.apache.camel.util.CaseInsensitiveMap
+2014-01-24 12:34:21,504 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE reseller, 1111111, class java.lang.String
+2014-01-24 12:34:21,504 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE myHeader, {Accept-Encoding=gzip,deflate, SOAPAction=balanceRequest, Connection=Keep-Alive, Content-Type=text/xml;charset=UTF-8}, class java.util.HashMap
+2014-01-24 12:34:21,505 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE transid_request, 0, class java.lang.String
+2014-01-24 12:34:21,505 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - ################### KEY, NORMALIZED AND VALUE ARE subscriber, 8412345, class java.lang.String
+2014-01-24 12:34:21,507 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - node processing finished<?xml version="1.0" encoding="UTF-8"?><message>
+<amount>123</amount>
+<flag>1</flag>
+<__ProcessFlowId>Billing</__ProcessFlowId>
+<sessionId>xxxxxx</sessionId>
+<pin>123456</pin>
+<initiator>ut_mbt</initiator>
+<wsrequestheaders>{Expect=100-continue, Host=localhost:8089, operationName=ougWService, connection=Keep-Alive, Content-Length=1073, User-Agent=Apache-HttpClient/4.0 (java 1.5), Content-Type=application/soap+xml;charset=UTF-8, operationNameSpace=http://ougwebcomponent.components.oug.osgi.scorex.com/, org.apache.cxf.headers.Header.list=[]}</wsrequestheaders>
+<reseller>1111111</reseller>
+<myHeader>{Accept-Encoding=gzip,deflate, SOAPAction=balanceRequest, Connection=Keep-Alive, Content-Type=text/xml;charset=UTF-8}</myHeader>
+<transid_request>0</transid_request>
+<subscriber>8412345</subscriber>
+<validity>24</validity>
+</message>
+
+2014-01-24 12:34:21,507 [Camel thread 12: Threads] TRACE c.e.d.c.GenericPrepareTemplate - END PROCESSING TEMPLATE
+2014-01-24 12:34:22,575 [Camel thread 10: Threads] TRACE c.e.d.b.IsBillingOperationSuccessfull - Checking the result of the billing operation. Result is: -1
+2014-01-24 12:34:22,575 [Camel thread 10: Threads] TRACE c.e.d.b.IsBillingOperationSuccessfull - getting billing result
+2014-01-24 12:34:22,576 [Camel thread 10: Threads] TRACE c.e.d.b.IsBillingOperationSuccessfull - @@@@@@@@@@ IsBillingOperationSuccessfull BILLING operation result is; p
+2014-01-24 12:34:22,576 [Camel thread 10: Threads] DEBUG c.e.d.b.CreateTransaction - getting connection from pool
+2014-01-24 12:34:22,576 [Camel thread 10: Threads] DEBUG c.e.d.b.CreateTransaction - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=29, lastUsedAgoInSec=29, creationTimeAgoInSec=29}
+2014-01-24 12:34:22,578 [Camel thread 10: Threads] TRACE c.e.d.b.CreateTransaction -  BILLING operation status is: p
+2014-01-24 12:34:22,586 [Camel thread 10: Threads] WARN c.e.d.b.CreateTransaction - CreateTransaction: General Exception:For input string: "p"
+2014-01-24 12:34:22,586 [Camel thread 10: Threads] WARN c.e.d.b.CreateTransaction - CreateTransaction: Reason:null
+2014-01-24 12:34:22,586 [Camel thread 10: Threads] DEBUG c.e.d.o.UpdateOfferAcceptFlag - getting connection from pool
+2014-01-24 12:34:22,587 [Camel thread 10: Threads] DEBUG c.e.d.o.UpdateOfferAcceptFlag - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=29, lastUsedAgoInSec=28, creationTimeAgoInSec=29}
+2014-01-24 12:34:22,587 [Camel thread 10: Threads] DEBUG c.e.d.o.UpdateOfferAcceptFlag - update DAA_PRODUCT set PRODSTATUS = ? WHERE DAA_PRODUCT_ID = 206513
+2014-01-24 12:34:22,589 [Camel thread 10: Threads] DEBUG c.e.d.o.updateOfferStatus - getting connection from pool
+2014-01-24 12:34:22,589 [Camel thread 10: Threads] DEBUG c.e.d.o.updateOfferStatus - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=29, lastUsedAgoInSec=1, creationTimeAgoInSec=29}
+2014-01-24 12:34:22,590 [Camel thread 10: Threads] DEBUG c.e.d.o.updateOfferStatus - update DAA_OFFER set PROCESS_STATUS = ?,  FINISH_DATE = CURRENT_TIMESTAMP, SMS_STATUS = ? WHERE daa_offer_id = ?, OFFER ACCEPTED, 024012411335729144
+2014-01-24 12:34:22,590 [Camel thread 10: Threads] TRACE c.e.d.o.updateOfferStatus - updateOfferStatusbd: SeqValue: 0
+2014-01-24 12:34:31,438 [Camel thread 11: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - Loading properties...
+2014-01-24 12:34:31,440 [Camel thread 11: Threads] DEBUG c.e.c.c.ConnectionPool - Calling init method more than once. Skipping.
+2014-01-24 12:34:31,440 [Camel thread 11: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - Properties OK
+2014-01-24 12:34:31,440 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Billing operation flag : 0
+2014-01-24 12:34:31,444 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - getting connection from pool
+2014-01-24 12:34:31,445 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=38, lastUsedAgoInSec=10, creationTimeAgoInSec=38}
+2014-01-24 12:34:31,455 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - topupinfo: query executed: SELECT * FROM TOPUP_NOTIFICATION WHERE TOPUP_NOTIFICATION_ID = 5
+2014-01-24 12:34:31,456 [Camel thread 11: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - get topupinfo MIN: 111111, TOPUP_NOTIFICATION_ID is: 5
+2014-01-24 12:34:31,462 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM DAA_PRODUCT WHERE MOBILEIDENTITYNUMBER_MIN= '111111'
+2014-01-24 12:34:31,462 [Camel thread 11: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - the product doesn't exists
+2014-01-24 12:34:31,463 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM DAA_TRANSACTIONS WHERE PRODUCT_ID = 'null'AND TRANSACTION_DESC = 'AA amount offered'
+2014-01-24 12:34:31,466 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM LOW_0_BALANCE WHERE MOBILEIDENTITYNUMBER_MIN= '111111'
+2014-01-24 12:34:31,468 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM DAA_OFFER WHERE MOBILEIDENTITYNUMBER_MIN= '111111'
+2014-01-24 12:34:31,471 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM PREVIOUS_WEEK_DATA WHERE MOBILEIDENTITYNUMBER_MIN= '111111'
+2014-01-24 12:34:31,472 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Start build alias, signature= DAAReimb, DAA
+2014-01-24 12:34:31,513 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:OnlineAutoTopup = TM Field type: String
+2014-01-24 12:34:31,513 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:LowbalAirtimebalance = 24.0 Field type: Numeric
+2014-01-24 12:34:31,514 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:LowbalMin = 111111 Field type: String
+2014-01-24 12:34:31,514 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupAmount = 10.0 Field type: Numeric
+2014-01-24 12:34:31,514 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupMin = 111111 Field type: String
+2014-01-24 12:34:31,514 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupTransactionId = 7889 Field type: String
+2014-01-24 12:34:31,514 [Camel thread 11: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupType = type Field type: String
+2014-01-24 12:34:31,514 [Camel thread 11: Threads] DEBUG c.ema.daa.topup.ExistsDaa - EXISTS DAA IS: failed
+2014-01-24 12:34:31,515 [Camel thread 11: Threads] DEBUG c.e.d.t.LogTransaction - getting connection from pool
+2014-01-24 12:34:31,515 [Camel thread 11: Threads] DEBUG c.e.d.t.LogTransaction - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=38, lastUsedAgoInSec=10, creationTimeAgoInSec=38}
+2014-01-24 12:34:31,515 [Camel thread 11: Threads] DEBUG c.e.d.t.LogTransaction - UPDATE TOPUP_NOTIFICATION SET PROCESS_STATUS = ? ,  FINISH_DATE = CURRENT_TIMESTAMP WHERE TOPUP_NOTIFICATION_ID = 5
+2014-01-24 12:34:39,339 [Camel thread 10: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - Loading properties...
+2014-01-24 12:34:39,340 [Camel thread 10: Threads] DEBUG c.e.c.c.ConnectionPool - Calling init method more than once. Skipping.
+2014-01-24 12:34:39,340 [Camel thread 10: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - Properties OK
+2014-01-24 12:34:39,340 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Billing operation flag : 0
+2014-01-24 12:34:39,341 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - getting connection from pool
+2014-01-24 12:34:39,341 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=46, lastUsedAgoInSec=16, creationTimeAgoInSec=46}
+2014-01-24 12:34:39,345 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - topupinfo: query executed: SELECT * FROM TOPUP_NOTIFICATION WHERE TOPUP_NOTIFICATION_ID = 1
+2014-01-24 12:34:39,346 [Camel thread 10: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - get topupinfo MIN: 12345, TOPUP_NOTIFICATION_ID is: 1
+2014-01-24 12:34:39,349 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM DAA_PRODUCT WHERE MOBILEIDENTITYNUMBER_MIN= '12345'
+2014-01-24 12:34:39,350 [Camel thread 10: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - the product doesn't exists
+2014-01-24 12:34:39,350 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM DAA_TRANSACTIONS WHERE PRODUCT_ID = 'null'AND TRANSACTION_DESC = 'AA amount offered'
+2014-01-24 12:34:39,352 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM LOW_0_BALANCE WHERE MOBILEIDENTITYNUMBER_MIN= '12345'
+2014-01-24 12:34:39,354 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM DAA_OFFER WHERE MOBILEIDENTITYNUMBER_MIN= '12345'
+2014-01-24 12:34:39,354 [Camel thread 10: Threads] TRACE c.e.d.t.GetTopUpNotificationInfo - Getting offer info
+2014-01-24 12:34:39,355 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - SELECT * FROM PREVIOUS_WEEK_DATA WHERE MOBILEIDENTITYNUMBER_MIN= '12345'
+2014-01-24 12:34:39,356 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Start build alias, signature= DAAReimb, DAA
+2014-01-24 12:34:39,358 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:OnlineAutoTopup = TM Field type: String
+2014-01-24 12:34:39,358 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:LowbalAirtimebalance = 24.0 Field type: Numeric
+2014-01-24 12:34:39,358 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:LowbalMin = 12345 Field type: String
+2014-01-24 12:34:39,359 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupAmount = 10.0 Field type: Numeric
+2014-01-24 12:34:39,359 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupMin = 12345 Field type: String
+2014-01-24 12:34:39,359 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupTransactionId = 7889 Field type: String
+2014-01-24 12:34:39,359 [Camel thread 10: Threads] DEBUG c.e.d.t.GetTopUpNotificationInfo - Field found:TopupType = type Field type: String
+2014-01-24 12:34:39,359 [Camel thread 10: Threads] DEBUG c.ema.daa.topup.ExistsDaa - EXISTS DAA IS: failed
+2014-01-24 12:34:39,359 [Camel thread 10: Threads] DEBUG c.e.d.t.LogTransaction - getting connection from pool
+2014-01-24 12:34:39,359 [Camel thread 10: Threads] DEBUG c.e.d.t.LogTransaction - before returning connection: ConnectionHandle{url=jdbc:oracle:thin:@localhost:1521:XE, user=client_1, debugHandle=null, lastResetAgoInSec=46, lastUsedAgoInSec=16, creationTimeAgoInSec=46}
+2014-01-24 12:34:39,359 [Camel thread 10: Threads] DEBUG c.e.d.t.LogTransaction - UPDATE TOPUP_NOTIFICATION SET PROCESS_STATUS = ? ,  FINISH_DATE = CURRENT_TIMESTAMP WHERE TOPUP_NOTIFICATION_ID = 1

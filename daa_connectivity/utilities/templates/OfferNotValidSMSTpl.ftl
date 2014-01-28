@@ -1,0 +1,1 @@
+Xin loi, de nghi ung tien cua Quy khach da het han hieu luc. Vui long nap tien de co the tiep tuc su dung dich vu cua MobiFone!

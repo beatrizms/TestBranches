@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<process name="AcceptanceFlow" key="AcceptanceFlow" xsi:schemaLocation="http://jbpm.org/4.0/jpdl ../conf/jpdl-4.0.xsd" xmlns="http://jbpm.org/4.0/jpdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <start name="Start">
+        <transition to="SMS_Listener"/>
+    </start>
+    <custom expr="#{preBeanActivity}" name="SMS_Listener">
+        <transition to="InitSystem" name="success"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityLoadSystemProperties}" name="InitSystem">
+        <transition to="ProcessSMS" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityProcessSms}" name="ProcessSMS">
+        <transition to="SMSContent" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="SMSContent">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="Set_Offer_Accept_Flag_OK" name="OK"/>
+        <transition to="Set_Offer_Accept_KO" name="EXPIRED"/>
+        <transition to="PrepareTypoSMSTpl" name="TYPO"/>
+        <transition to="UpdateCustomer" name="STOP"/>
+        <transition to="End1" name="NO_PROCESS"/>
+        <transition to="Process" name="ACTIVATE"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/CheckSMSAnswer.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityUpdateOfferAcceptFlag}" name="Set_Offer_Accept_Flag_OK">
+        <transition to="PrepareBillingConnection" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityPrepareBillingCall}" name="PrepareBillingConnection">
+        <transition to="PrepareBillingLoadInstructions" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="PrepareBillingLoadInstructions">
+        <transition to="PrepareBillingLoadInstructionsTemplate" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="PrepareBillingLoadInstructionsTemplate">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="CallBilling" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=billingTpl.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=billingRequest| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{httpActivity}" name="CallBilling">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="Load_Instruction_Succesfull" name="success"/>
+        <property name="params">
+            <string value="port=8089| host=localhost| dataTimeout=30000| httpMethod=POST| defaultMaxConnPerRoute=60| responseKey=billResult| errorCode_key=error.code| headerKey=header| entityDataKey=billingRequest| returnCodeKey=returnCode| entityCharsetKey=UTF8| parameterKey=params| maxTotalConnection=60| connectionTimeout=60000| path=billing| errorParam_key=error.param"/>
+        </property>
+
+    </custom>
+    <custom expr="#{scriptRoutingActivity}" name="Load_Instruction_Succesfull">
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="Create_Product" name="success"/>
+        <transition to="Create_Transaction" name="failed"/>
+        <property name="params">
+            <string value="groovyScript=utilities/script/IsBillingOperationSuccessfull.groovy"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityCreateProduct}" name="Create_Product">
+        <transition to="PrepareAccept" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="PrepareAccept">
+        <transition to="Process_Tpl" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="Process_Tpl">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="Prepare_Confirmation_SMS" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=OfferAccepted.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=SMS| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareSMS}" name="Prepare_Confirmation_SMS">
+        <transition to="Send_SMS_Confirmation_AALoad" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivitySendSMS}" name="Send_SMS_Confirmation_AALoad">
+        <transition to="Create_Transaction" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityCreateTransaction}" name="Create_Transaction">
+        <transition to="UpdateProductStatus" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityUpdateProductStatus}" name="UpdateProductStatus">
+        <transition to="UpdateOfferStatus" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityUpdateOfferStatus}" name="UpdateOfferStatus">
+        <transition to="End1" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <state name="End1"/>
+    <custom expr="#{errorBundleHandler}" name="errorBundleHandler">
+        <transition to="End1"/>
+        <property name="params">
+            <string value="errorMessage_key=error.message| destinationErrorCode_key=error.destination| errorCode_key=error.code| cpfId=AcceptanceFlow| errorParam_key=error.param"/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityUpdateOfferAcceptFlag}" name="Set_Offer_Accept_KO">
+        <transition to="Prepare" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareTemplate}" name="Prepare">
+        <transition to="OfferNoValidTpl" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="OfferNoValidTpl">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="Prepare_No_Validity_SMS" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=OfferNotValidSMSTpl.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=SMS| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareSMS}" name="Prepare_No_Validity_SMS">
+        <transition to="Send_No_Validity_SMS" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivitySendSMS}" name="Send_No_Validity_SMS">
+        <transition to="UpdateOfferStatus" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="PrepareTypoSMSTpl">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="PrepareTypoSMS" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=SMSTypoTpl.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=SMS| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareSMS}" name="PrepareTypoSMS">
+        <transition to="SendTypoSMS" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivitySendSMS}" name="SendTypoSMS">
+        <transition to="UnlockOffer" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityUnlockOffer}" name="UnlockOffer">
+        <transition to="End1" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityUpdateCustomer}" name="UpdateCustomer">
+        <transition to="ProcessSTOP" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="ProcessSTOP">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="PrepareStopReactivateSMS" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=StopSMS.ftl| errorCode_key=error.code| templateRoot_key=templateRoot| errorParam_key=error.param| result_key=SMS| xmlFile="/>
+        </property>
+    </custom>
+    <custom expr="#{groovyScriptActivityGenericPrepareSMS}" name="PrepareStopReactivateSMS">
+        <transition to="SendStopSMS" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivitySendSMS}" name="SendStopSMS">
+        <transition to="End1" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{groovyScriptActivityUpdateCustomer}" name="Process">
+        <transition to="ProcessREACTIVATE" name="success"/>
+        <transition to="errorBundleHandler" name="error"/>
+    </custom>
+    <custom expr="#{xmlTemplateServiceActivity}" name="ProcessREACTIVATE">
+        <transition to="errorBundleHandler" name="fail"/>
+        <transition to="errorBundleHandler" name="error"/>
+        <transition to="PrepareStopReactivateSMS" name="success"/>
+        <property name="params">
+            <string value="folder=utilities/templates/| template=ReactivateSMS.ftl| errorCode_key=error.code| templateRoot_key=templateROOT| errorParam_key=error.param| result_key=SMS| xmlFile="/>
+        </property>
+    </custom>
+</process>

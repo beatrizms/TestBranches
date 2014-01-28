@@ -1,0 +1,1 @@
+Chao mung Quy khach tham gia su dung dich vu Ung tien cua MobiFone! Tran trong cam on.

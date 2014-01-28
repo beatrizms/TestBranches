@@ -1,0 +1,6 @@
+----------------------------------------------------------------
+2014-01-24 11:33:25.464 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.1.0 - (938214): instance a816c00e-0143-c406-a11e-000000668cd8 
+on database directory memory:E:\Prod\DynamicAdvancedAirtime\daa_connectivity   with class loader java.net.URLClassLoader@146b6db
+
+Database Class Loader started - derby.database.classpath=''
